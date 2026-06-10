@@ -61,7 +61,7 @@ async function waitForServer(url, timeoutMs) {
   return false;
 }
 
-async function fetchAndCheck(url, description) {
+async function fetchAndCheck(url, description, { checkBlank = true } = {}) {
   log(`  → ${description}: ${url}`, "cyan");
   let res;
   try {
@@ -76,10 +76,11 @@ async function fetchAndCheck(url, description) {
   const is504 = status === 504;
   const is500ish = status >= 500;
   const isBlank =
-    body.trim().length === 0 ||
-    body.includes("has_blank_screen") ||
-    body.includes("504 Gateway Time-out") ||
-    body.includes("before the app handler ran");
+    checkBlank &&
+    (body.trim().length === 0 ||
+      body.includes("has_blank_screen") ||
+      body.includes("504 Gateway Time-out") ||
+      body.includes("before the app handler ran"));
 
   if (is504) {
     error(`${description} returned 504`);
