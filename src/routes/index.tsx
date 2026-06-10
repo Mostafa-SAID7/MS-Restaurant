@@ -1,29 +1,49 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Toaster } from "sonner";
+import { Navbar } from "@/components/portfolio/Navbar";
+import { Hero } from "@/components/portfolio/Hero";
+import { About } from "@/components/portfolio/About";
+import { Skills } from "@/components/portfolio/Skills";
+import { Projects } from "@/components/portfolio/Projects";
+import { Experience } from "@/components/portfolio/Experience";
+import { Contact } from "@/components/portfolio/Contact";
+import { Footer } from "@/components/portfolio/Footer";
+import { SmoothScroll } from "@/components/portfolio/SmoothScroll";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Maison.dev — Full-Stack Developer for Restaurants & Cafes" },
+      {
+        name: "description",
+        content:
+          "Premium full-stack development for restaurants and cafes: POS, KDS, online ordering, QR menus, table management, loyalty, and analytics.",
+      },
+      { property: "og:title", content: "Maison.dev — Restaurant & Cafe Systems Specialist" },
+      {
+        property: "og:description",
+        content:
+          "POS, online ordering, KDS, QR menus, loyalty and analytics — built for hospitality.",
+      },
+      { property: "og:type", content: "website" },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="relative min-h-screen overflow-x-hidden">
+      <SmoothScroll />
+      <Toaster theme="dark" position="top-center" richColors />
+      <Navbar />
+      <Hero />
+      <About />
+      <Projects />
+      <Skills />
+      <Experience />
+      <Contact />
+      <Footer />
+    </main>
   );
 }
