@@ -107,10 +107,11 @@ async function runSmokeTest() {
   });
 
   let serverExited = false;
-  server.on("exit", (code) => {
+  server.on("exit", (code, signal) => {
     serverExited = true;
-    if (code !== 0 && code !== null) {
-      error(`Dev server exited early with code ${code}`);
+    // 143 = 128 + SIGTERM(15) — normal when we kill the server after testing
+    if (code !== 0 && code !== 143 && code !== null) {
+      error(`Dev server exited early with code ${code} (signal: ${signal})`);
     }
   });
 
