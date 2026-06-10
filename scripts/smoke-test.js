@@ -55,7 +55,7 @@ async function waitForServer(url, timeoutMs) {
     } catch {
       // not ready yet
     }
-    await setTimeout(POLL_INTERVAL_MS);
+    await sleep(POLL_INTERVAL_MS);
   }
   return false;
 }
@@ -136,7 +136,7 @@ async function runSmokeTest() {
     }
 
     // 3. Give Vite a moment to finish initial optimization / SSR bootstrap
-    await setTimeout(3000);
+    await sleep(3000);
 
     // 4. Fetch the root page
     const root = await fetchAndCheck(DEV_URL, "Root page (/)");
@@ -184,7 +184,7 @@ async function runSmokeTest() {
     // 8. Kill server
     log("Shutting down dev server …", "yellow");
     server.kill("SIGTERM");
-    await setTimeout(2000);
+    await sleep(2000);
     if (!serverExited) {
       server.kill("SIGKILL");
     }
