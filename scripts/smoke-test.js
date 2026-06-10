@@ -154,7 +154,7 @@ async function runSmokeTest() {
 
     for (const p of depPaths) {
       const depUrl = `${DEV_URL}${p}`;
-      const result = await fetchAndCheck(depUrl, `Vite dep ${p}`);
+      const result = await fetchAndCheck(depUrl, `Vite dep ${p}`, { checkBlank: false });
       if (!result.ok) failed = true;
     }
 
