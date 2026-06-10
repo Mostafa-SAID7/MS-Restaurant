@@ -13,12 +13,18 @@ export default defineConfig({
   ],
   optimizeDeps: {
     ignoreOutdatedRequests: true,
-  },
-  ssr: {
-    noExternal: ["@tanstack/start-storage-context"],
+    exclude: ["@tanstack/start-storage-context"],
   },
   build: {
     outDir: "dist",
     emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: "./index.html",
+      },
+      output: {
+        manualChunks: undefined,
+      },
+    },
   },
 });
