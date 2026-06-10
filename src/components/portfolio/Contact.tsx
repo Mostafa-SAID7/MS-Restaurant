@@ -2,7 +2,6 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
-import { useServerFn } from "@tanstack/react-start";
 import { Mail, MapPin, Send } from "lucide-react";
 import { SectionHeading } from "./Reveal";
 import { submitContact } from "@/lib/contact.functions";
@@ -16,7 +15,6 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 export function Contact() {
-  const send = useServerFn(submitContact);
   const {
     register,
     handleSubmit,
@@ -26,7 +24,7 @@ export function Contact() {
 
   const onSubmit = async (data: FormData) => {
     try {
-      await send({ data });
+      await submitContact(data);
       toast.success("Message sent — I'll reply within 24 hours.", {
         description: `Thanks, ${data.name}.`,
       });

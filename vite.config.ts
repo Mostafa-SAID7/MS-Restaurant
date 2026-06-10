@@ -6,14 +6,15 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   plugins: [
-    TanStackRouterVite(),
+    TanStackRouterVite({
+      autoCodeSplitting: true,
+    }),
     react(),
     tailwindcss(),
     tsconfigPaths(),
   ],
   optimizeDeps: {
     ignoreOutdatedRequests: true,
-    exclude: ["@tanstack/start-storage-context"],
   },
   build: {
     outDir: "dist",
@@ -26,5 +27,8 @@ export default defineConfig({
         manualChunks: undefined,
       },
     },
+  },
+  define: {
+    "process.env.VITE_CLIENT_BUILD": "true",
   },
 });
