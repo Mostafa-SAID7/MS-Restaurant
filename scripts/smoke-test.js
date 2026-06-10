@@ -11,7 +11,8 @@
 import { spawn } from "child_process";
 import { setTimeout as sleep } from "timers/promises";
 
-const DEV_URL = process.env.SMOKE_URL || "http://localhost:3000";
+const DEV_PORT = Number(process.env.SMOKE_PORT) || 3456;
+const DEV_URL = process.env.SMOKE_URL || `http://localhost:${DEV_PORT}`;
 const TIMEOUT_MS = Number(process.env.SMOKE_TIMEOUT) || 60000;
 const POLL_INTERVAL_MS = 800;
 
@@ -97,8 +98,8 @@ async function runSmokeTest() {
   log("=".repeat(60), "yellow");
 
   // 1. Start dev server
-  log(`Starting dev server (timeout ${TIMEOUT_MS}ms) …`, "yellow");
-  const server = spawn("bun", ["run", "dev"], {
+  log(`Starting dev server on port ${DEV_PORT} (timeout ${TIMEOUT_MS}ms) …`, "yellow");
+  const server = spawn("bun", ["run", "dev", "--", "--port", String(DEV_PORT)], {
     stdio: "pipe",
     detached: false,
     env: { ...process.env, NODE_ENV: "development" },
