@@ -9,7 +9,7 @@
  */
 
 import { spawn } from "child_process";
-import { setTimeout } from "timers/promises";
+import { setTimeout as sleep } from "timers/promises";
 
 const DEV_URL = process.env.SMOKE_URL || "http://localhost:3000";
 const TIMEOUT_MS = Number(process.env.SMOKE_TIMEOUT) || 60000;
