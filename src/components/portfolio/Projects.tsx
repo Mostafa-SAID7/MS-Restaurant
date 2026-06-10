@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { categories, projects } from "@/data/projects";
+import { categories, projects, type Project } from "@/data/projects";
 import { SectionHeading } from "./Reveal";
+import { ProjectModal } from "./ProjectModal";
 
 export function Projects() {
   const [active, setActive] = useState<(typeof categories)[number]>("All");
+  const [selected, setSelected] = useState<Project | null>(null);
   const list = active === "All" ? projects : projects.filter((p) => p.category === active);
 
   return (
@@ -14,7 +16,7 @@ export function Projects() {
         <SectionHeading
           eyebrow="Featured Work"
           title="Projects that move kitchens"
-          subtitle="Selected systems shipped for restaurant groups, independent cafes, and cloud kitchens."
+          subtitle="Selected systems shipped for restaurant groups, independent cafes, and cloud kitchens. Click any card for the full story."
         />
 
         <div className="mb-10 flex flex-wrap justify-center gap-2">
@@ -36,14 +38,15 @@ export function Projects() {
         <motion.div layout className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <AnimatePresence mode="popLayout">
             {list.map((p, i) => (
-              <motion.article
+              <motion.button
                 key={p.id}
                 layout
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
                 transition={{ duration: 0.4, delay: i * 0.04 }}
-                className="group relative overflow-hidden rounded-3xl glass shadow-elegant"
+                onClick={() => setSelected(p)}
+                className="group relative overflow-hidden rounded-3xl glass shadow-elegant text-left transition hover:-translate-y-1 hover:shadow-gold focus:outline-none focus:ring-2 focus:ring-gold"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
@@ -84,12 +87,18 @@ export function Projects() {
                       </li>
                     ))}
                   </ul>
+
+                  <p className="mt-5 text-xs font-medium text-gold opacity-0 transition group-hover:opacity-100">
+                    View details →
+                  </p>
                 </div>
-              </motion.article>
+              </motion.button>
             ))}
           </AnimatePresence>
         </motion.div>
       </div>
+
+      <ProjectModal project={selected} onClose={() => setSelected(null)} />
     </section>
   );
 }

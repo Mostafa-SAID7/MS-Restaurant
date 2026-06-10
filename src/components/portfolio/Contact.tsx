@@ -2,8 +2,10 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
+import { useServerFn } from "@tanstack/react-start";
 import { Mail, MapPin, Send } from "lucide-react";
 import { SectionHeading } from "./Reveal";
+import { submitContact } from "@/lib/contact.functions";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Please enter your name").max(100),
@@ -14,6 +16,7 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 export function Contact() {
+  const send = useServerFn(submitContact);
   const {
     register,
     handleSubmit,
@@ -22,11 +25,18 @@ export function Contact() {
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
   const onSubmit = async (data: FormData) => {
-    await new Promise((r) => setTimeout(r, 700));
-    toast.success("Message sent — I'll reply within 24 hours.", {
-      description: `Thanks, ${data.name}.`,
-    });
-    reset();
+    try {
+      await send({ data });
+      toast.success("Message sent — I'll reply within 24 hours.", {
+        description: `Thanks, ${data.name}.`,
+      });
+      reset();
+    } catch (err) {
+      console.error(err);
+      toast.error("Something went wrong", {
+        description: "Please try again in a moment.",
+      });
+    }
   };
 
   return (
