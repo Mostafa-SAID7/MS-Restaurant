@@ -1,5 +1,5 @@
-import loyalty from "@/assets/project-loyalty.jpg";
-import dashboard from "@/assets/project-dashboard.jpg";
+import burgerDelivery from "@/assets/projects/React/burger-delivery.png";
+import noorapp from "@/assets/projects/angular/noorapp.png";
 import ordering from "@/assets/project-ordering.jpg";
 
 export const orderingPlatformProject = {
@@ -8,8 +8,8 @@ export const orderingPlatformProject = {
   description: "A marketplace with multi-branch routing, live tracking, and a vendor dashboard.",
   longDescription:
     "A complete ordering ecosystem: customers browse multiple brands and branches, get routed intelligently, pay securely, and track orders live. Vendors get a comprehensive dashboard to manage menus, hours, inventory, and orders. Built with Next.js frontend and NestJS backend.",
-  image: ordering,
-  gallery: [ordering, loyalty, dashboard],
+  image: burgerDelivery,
+  gallery: [burgerDelivery, noorapp, ordering],
   category: "Online Ordering" as const,
   tech: ["Next.js", "NestJS", "MongoDB", "Stripe", "Mapbox"],
   metrics: ["Handled 1,200+ orders/day", "30+ vendors onboarded", "4.8★ user rating"],

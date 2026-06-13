@@ -1,4 +1,5 @@
-import hero from "@/assets/hero.jpg";
+import shuvo from "@/assets/projects/React/SHUVO.png";
+import bunzo from "@/assets/projects/React/Bunzo.png";
 
 export const uixshuvoProject = {
   id: "uixshuvo",
@@ -7,8 +8,8 @@ export const uixshuvoProject = {
     "Luxurious, high-end restaurant web application with stunning visuals, full e-commerce, bilingual support (EN/AR with RTL), and exceptional UX with smooth animations.",
   longDescription:
     "A premium fine-dining digital experience built with React 18 and Vite. Features pixel-perfect design, exceptional performance, and production-ready infrastructure. The application delivers stunning visuals with full e-commerce functionality including shopping cart, favorites system, and secure checkout. Fully bilingual support (English & Arabic) with complete RTL implementation and dynamic font switching ensures accessibility across markets. Incorporates advanced micro-animations, PWA capabilities, and optimized performance with lazy loading and WebP optimization.",
-  image: hero,
-  gallery: [hero],
+  image: shuvo,
+  gallery: [shuvo, bunzo],
   category: "Full Systems" as const,
   tech: [
     "React 18",

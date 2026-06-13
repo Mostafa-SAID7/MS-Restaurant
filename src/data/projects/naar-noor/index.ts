@@ -1,4 +1,5 @@
-import hero from "@/assets/hero.jpg";
+import naarNoor from "@/assets/projects/angular/Naar-Noor.png";
+import noorapp from "@/assets/projects/angular/noorapp.png";
 
 export const naarNoorProject = {
   id: "naar-noor",
@@ -7,8 +8,8 @@ export const naarNoorProject = {
     "Complete full-stack restaurant management platform for Naar & Noor showcasing authentic Himalayan cuisine with menu browsing, reservations, reviews, and robust Clean Architecture backend.",
   longDescription:
     "A comprehensive full-stack restaurant platform built specifically for Naar & Noor, celebrating authentic Himalayan cuisine. Features a modern, responsive Angular frontend enabling customers to browse menus, make table reservations, leave reviews, and submit contact inquiries. Backed by a robust .NET Clean Architecture API implementing CQRS patterns with MediatR for scalable, maintainable backend operations. Optimized for the Egyptian market with production-ready deployment and extensive documentation. The platform showcases excellent architectural patterns and modular design for easy scaling and future enhancements.",
-  image: hero,
-  gallery: [hero],
+  image: naarNoor,
+  gallery: [naarNoor, noorapp],
   category: "Full Systems" as const,
   tech: [
     "Angular 18",

@@ -1,4 +1,5 @@
-import hero from "@/assets/hero.jpg";
+import bella from "@/assets/projects/angular/bella.png";
+import roaster from "@/assets/projects/angular/Roaster.png";
 
 export const bellaProject = {
   id: "bella",
@@ -7,8 +8,8 @@ export const bellaProject = {
     "Sleek and elegant digital platform for Bella, an Italian/Mediterranean restaurant featuring stunning visuals, menu exploration, online ordering, reservations, and immersive brand storytelling.",
   longDescription:
     "A premium digital platform designed for Bella, a sophisticated Italian and Mediterranean restaurant. Delivers an elegant customer experience with stunning high-quality visuals, comprehensive menu exploration with detailed item descriptions, seamless online ordering capabilities, and intuitive reservation system. The site showcases immersive brand storytelling that reflects the essence of fine Italian dining. Built with a luxurious, modern aesthetic featuring glassmorphism effects, refined typography, and sophisticated color palettes that evoke the elegance of Italian cuisine. Optimized for mobile devices while maintaining premium desktop experience.",
-  image: hero,
-  gallery: [hero],
+  image: bella,
+  gallery: [bella, roaster],
   category: "Full Systems" as const,
   tech: [
     "React 19",

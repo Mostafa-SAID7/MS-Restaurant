@@ -1,4 +1,5 @@
-import hero from "@/assets/hero.jpg";
+import roaster from "@/assets/projects/angular/Roaster.png";
+import naarNoor from "@/assets/projects/angular/Naar-Noor.png";
 
 export const islandRoasterProject = {
   id: "island-roaster",
@@ -7,8 +8,8 @@ export const islandRoasterProject = {
     "Luxurious landing page for specialty coffee brand Island Roaster featuring interactive bean-to-mug journey, roast selector, brewing methods, and smart delivery checker with real-time island pricing.",
   longDescription:
     "A premium, high-end web experience celebrating Island Roaster, a specialty coffee brand from the Maldives. The site delivers a visually rich, immersive brand storytelling experience with a stunning hero section, interactive bean-to-mug journey showcasing roast selection and brewing methods, and an innovative smart delivery checker with real-time island pricing. Built with modern Angular architecture using standalone components and a clean, scalable feature-based folder structure. Features smooth animations, a custom luxury color palette with gold and bronze tones, and premium typography that reflects the brand's premium positioning.",
-  image: hero,
-  gallery: [hero],
+  image: roaster,
+  gallery: [roaster, naarNoor],
   category: "QR Menu" as const,
   tech: [
     "Angular 18",

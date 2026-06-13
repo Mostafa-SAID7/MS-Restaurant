@@ -1,4 +1,5 @@
-import hero from "@/assets/hero.jpg";
+import kitchenDash from "@/assets/projects/React/kitchen-dash.png";
+import shuvo from "@/assets/projects/React/SHUVO.png";
 
 export const kitchenDashProject = {
   id: "kitchen-dash",
@@ -7,8 +8,8 @@ export const kitchenDashProject = {
     "Dynamic restaurant kitchen dashboard and customer ordering platform for real-time order management, kitchen operations tracking, and smooth online menu browsing with delivery experience.",
   longDescription:
     "A comprehensive dual-interface platform called Kitchen Dash that serves both kitchen staff and end customers. Provides a dynamic kitchen dashboard for real-time order management and kitchen operations tracking, while simultaneously offering customers a smooth online menu browsing and delivery experience. The platform is built with a modern, fast interface specifically tailored for quick-service restaurants and food delivery services. Features intuitive order management, real-time status updates, and seamless customer flows from menu discovery to checkout.",
-  image: hero,
-  gallery: [hero],
+  image: kitchenDash,
+  gallery: [kitchenDash, shuvo],
   category: "Full Systems" as const,
   tech: [
     "React",

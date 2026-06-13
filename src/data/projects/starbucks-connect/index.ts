@@ -1,4 +1,5 @@
-import hero from "@/assets/hero.jpg";
+import starbucksConnect from "@/assets/projects/React/Starbucks-Connect.png";
+import starbucks from "@/assets/projects/React/starbucks.png";
 
 export const starbucksConnectProject = {
   id: "starbucks-connect",
@@ -7,8 +8,8 @@ export const starbucksConnectProject = {
     "Modern full-stack WiFi management and café experience platform with 3D interactive UI, AI chatbot, QR code generation, and bilingual support.",
   longDescription:
     "A comprehensive full-stack WiFi management and café platform inspired by Starbucks. Features a stunning 3D interactive UI powered by Three.js with real-time updates via SignalR. Users can manage WiFi networks, generate connection QR codes, access premium coffee shop features, and interact with an intelligent AI chatbot powered by Google Gemini for network troubleshooting. The application delivers seamless bilingual support (EN/AR with RTL), role-based access control, and a fully responsive design across all devices.",
-  image: hero,
-  gallery: [hero],
+  image: starbucksConnect,
+  gallery: [starbucksConnect, starbucks],
   category: "Full Systems" as const,
   tech: [
     "React 18",

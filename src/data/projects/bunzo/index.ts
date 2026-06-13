@@ -1,4 +1,5 @@
-import hero from "@/assets/hero.jpg";
+import bunzo from "@/assets/projects/React/Bunzo.png";
+import starbucks from "@/assets/projects/React/starbucks.png";
 
 export const bunzoProject = {
   id: "bunzo",
@@ -7,8 +8,8 @@ export const bunzoProject = {
     "Modern, immersive restaurant web application celebrating Egypt's authentic street burger culture with dynamic hero, interactive menu, rich-text blog, Instagram integration, and smooth animations.",
   longDescription:
     "A vibrant, high-performance restaurant web application celebrating Egypt's authentic street burger culture. Features an immersive hero section, fully interactive menu system with advanced category filtering and favorites management, and a rich-text blog platform powered by WYSIWYG editing capabilities. Integrates Instagram feed for authentic social proof, showcases smooth scroll animations and hero slider transitions, and delivers a fully responsive mobile-first design optimized for the Egyptian market. Built with React 19 and modern frontend best practices, emphasizing delightful user experience and engaging content presentation.",
-  image: hero,
-  gallery: [hero],
+  image: bunzo,
+  gallery: [bunzo, starbucks],
   category: "Full Systems" as const,
   tech: [
     "React 19",

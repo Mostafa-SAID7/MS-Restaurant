@@ -1,4 +1,5 @@
-import hero from "@/assets/hero.jpg";
+import burgerDelivery from "@/assets/projects/React/burger-delivery.png";
+import bunzo from "@/assets/projects/React/Bunzo.png";
 
 export const burgerDeliveryProject = {
   id: "burger-delivery",
@@ -7,8 +8,8 @@ export const burgerDeliveryProject = {
     "Modern, fast-paced burger delivery web application with seamless online food ordering, menu browsing, order customization, cart management, and intuitive mobile-first checkout.",
   longDescription:
     "A dynamic burger delivery platform focused on providing a seamless online food ordering experience optimized for speed and visual appeal. Customers can browse a delicious menu of burgers and sides, customize their orders with detailed options, manage their shopping cart in real-time, and complete checkout through an intuitive, mobile-first interface. The platform emphasizes fast load times, visual engagement, and smooth user flows tailored specifically for quick-service restaurants. Built with modern React practices and deployed for production performance.",
-  image: hero,
-  gallery: [hero],
+  image: burgerDelivery,
+  gallery: [burgerDelivery, bunzo],
   category: "Full Systems" as const,
   tech: [
     "React 18/19",

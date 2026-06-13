@@ -1,4 +1,5 @@
-import hero from "@/assets/hero.jpg";
+import starbucks from "@/assets/projects/React/starbucks.png";
+import starbucksConnect from "@/assets/projects/React/Starbucks-Connect.png";
 
 export const starbucksEgyptProject = {
   id: "starbucks-egypt",
@@ -7,8 +8,8 @@ export const starbucksEgyptProject = {
     "Premium enterprise-grade digital platform for Starbucks Egypt with bilingual support (EN/AR + RTL), Google OAuth, admin dashboard, and robust Clean Architecture backend.",
   longDescription:
     "An advanced enterprise-grade digital platform recreating the full Starbucks coffee commerce experience for the Egyptian market. Features comprehensive menu browsing, professional bilingual support (English & Arabic with complete RTL implementation), and server-side localization. Includes seamless Google OAuth authentication, dynamic content management with centralized image serving, and a powerful admin dashboard. Built with React 19 frontend showcasing modern design patterns and a robust .NET 9 backend implementing Clean Architecture and CQRS patterns with MediatR.",
-  image: hero,
-  gallery: [hero],
+  image: starbucks,
+  gallery: [starbucks, starbucksConnect],
   category: "Full Systems" as const,
   tech: [
     "React 19",
