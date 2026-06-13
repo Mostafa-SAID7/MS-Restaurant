@@ -1,6 +1,9 @@
 import qr from "@/assets/project-qr.jpg";
 import ordering from "@/assets/project-ordering.jpg";
 
+const qrImg = qr;
+const orderingImg = ordering;
+
 export const loyaltyProgramProject = {
   id: "loyalty-program",
   title: "Cafe Loyalty & CRM Program",
@@ -8,7 +11,7 @@ export const loyaltyProgramProject = {
   longDescription:
     "A comprehensive loyalty system with digital stamp cards, points-based rewards, and CRM functionality. Target guests with personalized offers based on behavior patterns. Built with React frontend and Node.js/NestJS backend with MongoDB for flexible data modeling.",
   image: "/projects/loyalty-program/main.jpg",
-  gallery: ["/projects/loyalty-program/main.jpg", qr, ordering],
+  gallery: ["/projects/loyalty-program/main.jpg", qrImg, orderingImg],
   category: "Analytics" as const,
   tech: ["React", "NestJS", "MongoDB", "Stripe", "SendGrid"],
   metrics: ["+52% repeat visits", "20k+ active members", "4.8★ ratings"],

@@ -1,6 +1,9 @@
 import loyalty from "@/assets/project-loyalty.jpg";
 import hero from "@/assets/hero.jpg";
 
+const loyaltyImg = loyalty;
+const heroImg = hero;
+
 export const qrMenuProject = {
   id: "qr-menu",
   title: "Digital QR Menu & Table Ordering",
@@ -8,7 +11,7 @@ export const qrMenuProject = {
   longDescription:
     "Transform the guest experience: each table gets a QR code linking to a beautiful digital menu. Guests browse, customize orders, and pay directly from their phone. Built with React and Tailwind for responsive design, Firebase for real-time sync, and Stripe for payments.",
   image: "/projects/qr-menu/main.jpg",
-  gallery: ["/projects/qr-menu/main.jpg", loyalty, hero],
+  gallery: ["/projects/qr-menu/main.jpg", loyaltyImg, heroImg],
   category: "QR Menu" as const,
   tech: ["React", "Tailwind CSS", "Firebase", "Stripe"],
   metrics: ["+38% avg ticket size", "Deployed to 80+ venues", "<2s scan-to-order"],
