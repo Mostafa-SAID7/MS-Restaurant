@@ -1,8 +1,10 @@
 import loyalty from "@/assets/project-loyalty.jpg";
 import dashboard from "@/assets/project-dashboard.jpg";
+import ordering from "@/assets/project-ordering.jpg";
 
 const loyaltyImg = loyalty;
 const dashboardImg = dashboard;
+const orderingImg = ordering;
 
 export const orderingPlatformProject = {
   id: "ordering-platform",
@@ -10,8 +12,8 @@ export const orderingPlatformProject = {
   description: "A marketplace with multi-branch routing, live tracking, and a vendor dashboard.",
   longDescription:
     "A complete ordering ecosystem: customers browse multiple brands and branches, get routed intelligently, pay securely, and track orders live. Vendors get a comprehensive dashboard to manage menus, hours, inventory, and orders. Built with Next.js frontend and NestJS backend.",
-  image: "/projects/ordering-platform/main.jpg",
-  gallery: ["/projects/ordering-platform/main.jpg", loyaltyImg, dashboardImg],
+  image: orderingImg,
+  gallery: [orderingImg, loyaltyImg, dashboardImg],
   category: "Online Ordering" as const,
   tech: ["Next.js", "NestJS", "MongoDB", "Stripe", "Mapbox"],
   metrics: ["Handled 1,200+ orders/day", "30+ vendors onboarded", "4.8★ user rating"],

@@ -1,5 +1,6 @@
 import hero from "@/assets/hero.jpg";
 import dashboard from "@/assets/project-dashboard.jpg";
+import restaurantApiImage from "@/assets/projects/asp-api/restaurant-app-api/home.png";
 
 const heroImg = hero;
 const dashboardImg = dashboard;
@@ -11,8 +12,8 @@ export const restaurantApiProject = {
     "Premium .NET 8 Web API for modern restaurant management, online ordering, and customer experiences with glassmorphism UI.",
   longDescription:
     "A production-ready full-stack restaurant platform built with .NET 8 and ASP.NET Core. Features comprehensive restaurant & menu management, secure user authentication, persistent shopping cart, and complete order lifecycle handling. Includes a stunning glassmorphism UI landing page, interactive Swagger documentation, and enterprise-grade DevOps setup with Docker and CI/CD pipelines. Built with clean architecture patterns for high maintainability and scalability.",
-  image: "/projects/restaurant-api/home.png",
-  gallery: ["/projects/restaurant-api/home.png", dashboardImg, heroImg],
+  image: restaurantApiImage,
+  gallery: [restaurantApiImage, dashboardImg, heroImg],
   category: "Full Systems" as const,
   tech: [
     ".NET 8",
