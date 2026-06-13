@@ -184,7 +184,7 @@ function AllProjectsPage() {
                         <h3 className="font-display text-lg font-semibold leading-tight">{p.title}</h3>
                         <ArrowUpRight className="h-5 w-5 shrink-0 text-gold transition group-hover:rotate-45" />
                       </div>
-                      <p className="mt-2 text-sm text-muted-foreground">{p.description}</p>
+                      <p className="mt-2 text-sm text-muted-foreground line-clamp-2">{p.description}</p>
 
                       <div className="mt-4 flex flex-wrap gap-1.5">
                         {p.tech.map((t) => (
@@ -196,19 +196,6 @@ function AllProjectsPage() {
                           </span>
                         ))}
                       </div>
-
-                      <ul className="mt-5 grid gap-1.5 border-t border-border pt-4">
-                        {p.metrics.map((m) => (
-                          <li key={m} className="flex items-center gap-2 text-xs text-muted-foreground">
-                            <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-                            {m}
-                          </li>
-                        ))}
-                      </ul>
-
-                      <p className="mt-5 text-xs font-medium text-gold opacity-0 transition group-hover:opacity-100">
-                        View details →
-                      </p>
                     </div>
                   </motion.button>
                 ))}
