@@ -20,12 +20,14 @@ export function ProjectModal({
     if (!project) return;
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     document.addEventListener("keydown", onKey);
+    // Prevent body scroll when modal is open
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
     document.body.style.overflow = "hidden";
-    document.documentElement.style.overflow = "hidden";
+    document.body.style.paddingRight = `${scrollbarWidth}px`;
     return () => {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
-      document.documentElement.style.overflow = "";
+      document.body.style.paddingRight = "";
     };
   }, [project, onClose]);
 
@@ -33,7 +35,7 @@ export function ProjectModal({
     <AnimatePresence>
       {project && (
         <motion.div
-          className="fixed inset-0 z-[60] flex items-center justify-center p-4"
+          className="fixed inset-0 z-[60] flex items-center justify-center p-4 overflow-hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -50,17 +52,18 @@ export function ProjectModal({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.98 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="relative z-10 max-h-[90vh] w-full max-w-5xl overflow-y-auto rounded-3xl glass shadow-elegant scrollbar-thin scrollbar-track-transparent scrollbar-thumb-gold/30 hover:scrollbar-thumb-gold"
+            className="relative z-10 max-h-[90vh] w-full max-w-5xl rounded-3xl glass shadow-elegant flex flex-col"
+            style={{ overflowY: "auto", scrollbarWidth: "thin", scrollbarColor: "var(--gold) transparent" }}
           >
             <button
               onClick={onClose}
               aria-label="Close"
-              className="absolute right-4 top-4 z-10 grid h-10 w-10 place-items-center rounded-full bg-background/70 backdrop-blur transition hover:bg-background"
+              className="absolute right-4 top-4 z-20 grid h-10 w-10 place-items-center rounded-full bg-background/70 backdrop-blur transition hover:bg-background"
             >
               <X className="h-4 w-4" />
             </button>
 
-            <div className="grid gap-0 md:grid-cols-2">
+            <div className="grid gap-0 md:grid-cols-2 flex-1">
               <div className="bg-secondary/30 p-4 md:p-6">
                 <div className="overflow-hidden rounded-2xl">
                   <img
@@ -88,7 +91,7 @@ export function ProjectModal({
                 )}
               </div>
 
-              <div className="p-6 sm:p-8">
+              <div className="p-6 sm:p-8 overflow-y-auto" style={{ scrollbarWidth: "thin", scrollbarColor: "var(--gold) transparent" }}>
                 <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-[11px] uppercase tracking-wider text-gold">
                   {project.category}
                 </span>
@@ -136,7 +139,7 @@ export function ProjectModal({
                   ))}
                 </div>
 
-                <div className="mt-7 flex flex-wrap gap-2">
+                <div className="mt-7 flex flex-wrap gap-2 pb-4">
                   {project.demoUrl && (
                     <a
                       href={project.demoUrl}
