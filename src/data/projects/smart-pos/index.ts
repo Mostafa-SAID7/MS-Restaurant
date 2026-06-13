@@ -2,10 +2,6 @@ import dashboard from "@/assets/project-dashboard.jpg";
 import hero from "@/assets/hero.jpg";
 import pos from "@/assets/project-pos.jpg";
 
-const dashboardImg = dashboard;
-const heroImg = hero;
-const posImg = pos;
-
 export const smartPosProject = {
   id: "smart-pos",
   title: "Smart POS + Kitchen Display System",
@@ -13,8 +9,8 @@ export const smartPosProject = {
     "Lightning-fast POS synced in real time with a KDS that orchestrates the kitchen line.",
   longDescription:
     "A complete front-of-house and back-of-house system: servers ring orders on tablets, items appear instantly on station-specific KDS screens, and timers help the line stay coordinated. Built for the speed of a Friday-night service. Full-stack built with React, Node.js, and PostgreSQL.",
-  image: posImg,
-  gallery: [posImg, heroImg, dashboardImg],
+  image: pos,
+  gallery: [pos, hero, dashboard],
   category: "POS" as const,
   tech: ["React", "Node.js", "WebSockets", "PostgreSQL", "Redis"],
   metrics: ["Reduced order time by 65%", "Used by 45+ restaurants", "99.9% uptime"],

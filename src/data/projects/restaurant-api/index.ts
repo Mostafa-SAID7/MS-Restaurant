@@ -2,9 +2,6 @@ import hero from "@/assets/hero.jpg";
 import dashboard from "@/assets/project-dashboard.jpg";
 import restaurantApiImage from "@/assets/projects/asp-api/restaurant-app-api/home.png";
 
-const heroImg = hero;
-const dashboardImg = dashboard;
-
 export const restaurantApiProject = {
   id: "restaurant-api",
   title: "Restaurant Management API (Full-Stack Platform)",
@@ -13,7 +10,7 @@ export const restaurantApiProject = {
   longDescription:
     "A production-ready full-stack restaurant platform built with .NET 8 and ASP.NET Core. Features comprehensive restaurant & menu management, secure user authentication, persistent shopping cart, and complete order lifecycle handling. Includes a stunning glassmorphism UI landing page, interactive Swagger documentation, and enterprise-grade DevOps setup with Docker and CI/CD pipelines. Built with clean architecture patterns for high maintainability and scalability.",
   image: restaurantApiImage,
-  gallery: [restaurantApiImage, dashboardImg, heroImg],
+  gallery: [restaurantApiImage, dashboard, hero],
   category: "Full Systems" as const,
   tech: [
     ".NET 8",
