@@ -9,7 +9,7 @@ export function Footer() {
           <span className="grid h-8 w-8 place-items-center rounded-lg bg-primary text-primary-foreground">
             <ChefHat className="h-4 w-4" />
           </span>
-          <span className="font-display text-base">
+          <span className="font-display text-base font-semibold">
             {footerBrand.name} <span className="text-gradient-gold">{footerBrand.highlight}</span>
           </span>
         </div>

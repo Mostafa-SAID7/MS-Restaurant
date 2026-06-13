@@ -36,7 +36,9 @@
   --color-gold-foreground: var(--gold-foreground);
   --color-gold-muted: var(--gold-muted);
 
-  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-display: "Instrument Serif", serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
   --font-arabic: "Tajawal", system-ui, sans-serif;
 }
 
@@ -170,7 +172,7 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
-    font-family: var(--font-sans);
+    font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
   }
 
@@ -181,5 +183,20 @@
   ::selection {
     background-color: var(--gold);
     color: var(--gold-foreground);
+  }
+}
+
+@layer components {
+  /* Font family utilities */
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .font-serif {
+    font-family: var(--font-display);
   }
 }

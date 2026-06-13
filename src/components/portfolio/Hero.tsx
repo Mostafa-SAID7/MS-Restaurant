@@ -78,7 +78,7 @@ export function Hero() {
         >
           {heroStats.map((s) => (
             <div key={s.label} className="glass rounded-2xl p-5 text-center">
-              <div className="font-display text-3xl text-gradient-gold">{s.value}</div>
+              <div className="font-display text-3xl font-semibold text-gradient-gold">{s.value}</div>
               <div className="mt-1 text-xs text-muted-foreground">{s.label}</div>
             </div>
           ))}
