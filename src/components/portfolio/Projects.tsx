@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { categories, projects, type Project } from "@/data/projects";
 import { SectionHeading } from "./Reveal";
 import { ProjectModal } from "./ProjectModal";
@@ -8,7 +9,7 @@ import { ProjectModal } from "./ProjectModal";
 export function Projects() {
   const [active, setActive] = useState<(typeof categories)[number]>("All");
   const [selected, setSelected] = useState<Project | null>(null);
-  const list = active === "All" ? projects : projects.filter((p) => p.category === active);
+  const list = (active === "All" ? projects : projects.filter((p) => p.category === active)).slice(0, 3);
 
   return (
     <section id="projects" className="relative py-24 sm:py-32">
@@ -96,6 +97,16 @@ export function Projects() {
             ))}
           </AnimatePresence>
         </motion.div>
+
+        <div className="mt-12 flex justify-center">
+          <Link
+            to="/projects"
+            className="inline-flex items-center gap-2 rounded-full border border-border glass px-6 py-3 text-sm font-medium transition hover:border-gold hover:text-gold hover:shadow-gold"
+          >
+            View All Projects
+            <ArrowUpRight className="h-4 w-4" />
+          </Link>
+        </div>
       </div>
 
       <ProjectModal project={selected} onClose={() => setSelected(null)} />

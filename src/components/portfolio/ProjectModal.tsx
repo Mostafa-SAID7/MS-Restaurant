@@ -48,12 +48,13 @@ export function ProjectModal({
             role="dialog"
             aria-modal="true"
             aria-labelledby="project-modal-title"
+            data-lenis-prevent
             initial={{ opacity: 0, y: 20, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.98 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="relative z-10 max-h-[90vh] w-full max-w-5xl rounded-3xl glass shadow-elegant flex flex-col"
-            style={{ overflowY: "auto", scrollbarWidth: "thin", scrollbarColor: "var(--gold) transparent" }}
+            className="relative z-10 max-h-[90vh] w-full max-w-5xl rounded-3xl glass shadow-elegant flex flex-col overflow-y-auto md:overflow-y-hidden"
+            style={{ scrollbarWidth: "thin", scrollbarColor: "var(--gold) transparent" }}
           >
             <button
               onClick={onClose}
@@ -63,7 +64,7 @@ export function ProjectModal({
               <X className="h-4 w-4" />
             </button>
 
-            <div className="grid gap-0 md:grid-cols-2 flex-1">
+            <div className="grid gap-0 md:grid-cols-2 flex-1 min-h-0 overflow-hidden">
               <div className="bg-secondary/30 p-4 md:p-6">
                 <div className="overflow-hidden rounded-2xl">
                   <img
@@ -91,7 +92,7 @@ export function ProjectModal({
                 )}
               </div>
 
-              <div className="p-6 sm:p-8 overflow-y-auto" style={{ scrollbarWidth: "thin", scrollbarColor: "var(--gold) transparent" }}>
+              <div className="p-6 sm:p-8 overflow-y-visible md:overflow-y-auto" style={{ scrollbarWidth: "thin", scrollbarColor: "var(--gold) transparent" }}>
                 <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-[11px] uppercase tracking-wider text-gold">
                   {project.category}
                 </span>

@@ -4,12 +4,10 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
-  HeadContent,
-  Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import type { ReactNode } from "react";
 
-import appCss from "../styles.css?url";
+import "../styles.css";
 
 function NotFoundComponent() {
   return (
@@ -82,8 +80,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
+      {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Tapestry&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap",
       },
     ],
   }),
@@ -94,17 +101,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
-  return (
-    <>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Tapestry&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
-      />
-      {children}
-    </>
-  );
+  return <>{children}</>;
 }
 
 function RootComponent() {
