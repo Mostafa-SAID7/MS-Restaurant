@@ -1,6 +1,6 @@
 /**
  * Centralized font configuration
- * Using Instrument Serif for display/headings and Inter for body text
+ * Using Tapestry for display/headings and Outfit for body text
  */
 
 export const fontConfig = {

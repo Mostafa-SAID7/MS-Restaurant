@@ -36,9 +36,9 @@
   --color-gold-foreground: var(--gold-foreground);
   --color-gold-muted: var(--gold-muted);
 
-  --font-display: "Instrument Serif", serif;
-  --font-body: "Inter", system-ui, sans-serif;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Tapestry", serif;
+  --font-body: "Outfit", system-ui, sans-serif;
+  --font-sans: "Outfit", system-ui, sans-serif;
   --font-arabic: "Tajawal", system-ui, sans-serif;
 }
 
