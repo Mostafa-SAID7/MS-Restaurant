@@ -92,7 +92,7 @@ export function ProjectModal({
                 </span>
                 <h2
                   id="project-modal-title"
-                  className="mt-3 text-2xl font-semibold sm:text-3xl"
+                  className="font-display mt-3 text-2xl font-semibold sm:text-3xl"
                 >
                   {project.title}
                 </h2>

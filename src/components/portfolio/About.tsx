@@ -27,7 +27,7 @@ export function About() {
               <Reveal key={p.title} delay={i * 0.05}>
                 <div className="group h-full glass rounded-2xl p-6 transition hover:-translate-y-1 hover:shadow-gold">
                   <p.icon className="h-6 w-6 text-gold transition group-hover:scale-110" />
-                  <h3 className="mt-4 text-lg font-semibold">{p.title}</h3>
+                  <h3 className="font-display mt-4 text-lg font-semibold">{p.title}</h3>
                   <p className="mt-1 text-sm text-muted-foreground">{p.desc}</p>
                 </div>
               </Reveal>

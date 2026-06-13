@@ -63,7 +63,7 @@ export function Projects() {
 
                 <div className="p-6">
                   <div className="flex items-start justify-between gap-3">
-                    <h3 className="text-lg font-semibold leading-tight">{p.title}</h3>
+                    <h3 className="font-display text-lg font-semibold leading-tight">{p.title}</h3>
                     <ArrowUpRight className="h-5 w-5 shrink-0 text-gold transition group-hover:rotate-45" />
                   </div>
                   <p className="mt-2 text-sm text-muted-foreground">{p.description}</p>

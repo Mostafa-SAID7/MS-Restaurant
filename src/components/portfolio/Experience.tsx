@@ -20,7 +20,7 @@ export function Experience() {
                   <span className="absolute left-3 top-3 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-gold shadow-gold md:left-1/2" />
                   <div className="pl-10 md:pl-0 md:pr-12 md:text-right">
                     <p className="text-xs uppercase tracking-[0.25em] text-gold">{e.year}</p>
-                    <h3 className="mt-2 text-lg font-semibold">{e.role}</h3>
+                    <h3 className="font-display mt-2 text-lg font-semibold">{e.role}</h3>
                     <p className="text-sm text-muted-foreground">{e.company}</p>
                   </div>
                   <div className="mt-2 pl-10 md:mt-0 md:pl-12">

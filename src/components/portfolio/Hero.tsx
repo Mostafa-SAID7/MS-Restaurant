@@ -32,7 +32,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.05 }}
-          className="text-balance text-4xl font-semibold leading-[1.05] sm:text-6xl md:text-7xl"
+          className="font-display text-balance text-4xl font-semibold leading-[1.05] sm:text-6xl md:text-7xl"
         >
           {heroData.name}
           <br />

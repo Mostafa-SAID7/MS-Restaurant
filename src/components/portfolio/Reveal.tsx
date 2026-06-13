@@ -29,7 +29,7 @@ export function SectionHeading({
         <p className="mb-3 text-xs uppercase tracking-[0.3em] text-gold">{eyebrow}</p>
       </Reveal>
       <Reveal delay={0.05}>
-        <h2 className="text-3xl font-semibold sm:text-5xl">{title}</h2>
+        <h2 className="font-display text-3xl font-semibold sm:text-5xl">{title}</h2>
       </Reveal>
       {subtitle && (
         <Reveal delay={0.1}>

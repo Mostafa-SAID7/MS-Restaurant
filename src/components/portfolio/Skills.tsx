@@ -19,7 +19,7 @@ export function Skills() {
                   <span className="grid h-11 w-11 place-items-center rounded-xl bg-primary text-primary-foreground">
                     <g.icon className="h-5 w-5" />
                   </span>
-                  <h3 className="text-lg font-semibold">{g.title}</h3>
+                  <h3 className="font-display text-lg font-semibold">{g.title}</h3>
                 </div>
                 <ul className="mt-5 flex flex-wrap gap-2">
                   {g.items.map((item) => (
