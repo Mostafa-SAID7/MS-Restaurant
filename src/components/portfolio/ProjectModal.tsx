@@ -21,9 +21,11 @@ export function ProjectModal({
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     document.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
     return () => {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
     };
   }, [project, onClose]);
 
@@ -48,7 +50,7 @@ export function ProjectModal({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.98 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="relative z-10 max-h-[90vh] w-full max-w-5xl overflow-y-auto rounded-3xl glass shadow-elegant"
+            className="relative z-10 max-h-[90vh] w-full max-w-5xl overflow-y-auto rounded-3xl glass shadow-elegant scrollbar-thin scrollbar-track-transparent scrollbar-thumb-gold/30 hover:scrollbar-thumb-gold"
           >
             <button
               onClick={onClose}
