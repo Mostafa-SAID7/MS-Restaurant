@@ -1,14 +1,14 @@
 /**
  * Centralized font configuration
- * Using Tapestry for display/headings and Outfit for body text
+ * Using Tapestry for main/display and Plus Jakarta Sans for secondary/body text
  */
 
 export const fontConfig = {
-  // Display font - used for headings, titles, and prominent text
+  // Display font - used for headings, titles, and prominent text (Main)
   display: "font-display",
-  // Body font - used for regular text and body content
+  // Body font - used for regular text and body content (Secondary)
   body: "font-body",
-  // Serif accent - alternative for special emphasis
+  // Serif accent - alternative for special emphasis (Main)
   serif: "font-serif",
 };
 

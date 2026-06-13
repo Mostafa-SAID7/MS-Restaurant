@@ -101,7 +101,7 @@ function RootShell({ children }: { children: ReactNode }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Tapestry&family=Outfit:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Tapestry&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
         />
         <HeadContent />
       </head>
