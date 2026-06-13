@@ -1,18 +1,17 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import { toast } from "sonner";
-import { Mail, MapPin, Send } from "lucide-react";
+import { Send } from "lucide-react";
 import { SectionHeading } from "./Reveal";
 import { submitContact } from "@/lib/contact.functions";
-
-const schema = z.object({
-  name: z.string().trim().min(2, "Please enter your name").max(100),
-  email: z.string().trim().email("Enter a valid email").max(255),
-  company: z.string().trim().max(120).optional(),
-  message: z.string().trim().min(10, "Tell me a bit more").max(1000),
-});
-type FormData = z.infer<typeof schema>;
+import {
+  contactInfo,
+  contactSectionData,
+  contactFormSchema,
+  contactFormFields,
+  contactMessages,
+  type ContactFormData,
+} from "@/data/contact";
 
 export function Contact() {
   const {
@@ -20,19 +19,19 @@ export function Contact() {
     handleSubmit,
     reset,
     formState: { errors, isSubmitting },
-  } = useForm<FormData>({ resolver: zodResolver(schema) });
+  } = useForm<ContactFormData>({ resolver: zodResolver(contactFormSchema) });
 
-  const onSubmit = async (data: FormData) => {
+  const onSubmit = async (data: ContactFormData) => {
     try {
       await submitContact(data);
-      toast.success("Message sent — I'll reply within 24 hours.", {
-        description: `Thanks, ${data.name}.`,
+      toast.success(contactMessages.success, {
+        description: contactMessages.successDescription(data.name),
       });
       reset();
     } catch (err) {
       console.error(err);
-      toast.error("Something went wrong", {
-        description: "Please try again in a moment.",
+      toast.error(contactMessages.error, {
+        description: contactMessages.errorDescription,
       });
     }
   };
@@ -41,23 +40,20 @@ export function Contact() {
     <section id="contact" className="relative py-24 sm:py-32">
       <div className="mx-auto max-w-5xl px-4">
         <SectionHeading
-          eyebrow="Contact"
-          title="Let's build something guests remember"
-          subtitle="Share a few details about your venue and what you're trying to solve. I usually reply within a day."
+          eyebrow={contactSectionData.eyebrow}
+          title={contactSectionData.title}
+          subtitle={contactSectionData.subtitle}
         />
 
         <div className="grid gap-8 md:grid-cols-5">
           <div className="md:col-span-2 space-y-4">
-            <div className="glass rounded-2xl p-5">
-              <Mail className="h-5 w-5 text-gold" />
-              <p className="mt-3 text-xs uppercase tracking-widest text-muted-foreground">Email</p>
-              <p className="mt-1 font-medium">hello@maison.dev</p>
-            </div>
-            <div className="glass rounded-2xl p-5">
-              <MapPin className="h-5 w-5 text-gold" />
-              <p className="mt-3 text-xs uppercase tracking-widest text-muted-foreground">Based in</p>
-              <p className="mt-1 font-medium">Remote · Worldwide</p>
-            </div>
+            {contactInfo.map((info) => (
+              <div key={info.label} className="glass rounded-2xl p-5">
+                <info.icon className="h-5 w-5 text-gold" />
+                <p className="mt-3 text-xs uppercase tracking-widest text-muted-foreground">{info.title}</p>
+                <p className="mt-1 font-medium">{info.value}</p>
+              </div>
+            ))}
           </div>
 
           <form
@@ -66,38 +62,40 @@ export function Contact() {
             noValidate
           >
             <div className="grid gap-4 sm:grid-cols-2">
-              <Field label="Your name" error={errors.name?.message}>
+              {contactFormFields.slice(0, 2).map((field) => (
+                <Field key={field.name} label={field.label} error={errors[field.name]?.message}>
+                  <input
+                    {...register(field.name)}
+                    type={field.type}
+                    className="w-full rounded-xl border border-border bg-background/40 px-4 py-3 text-sm outline-none transition focus:border-gold"
+                    placeholder={field.placeholder}
+                  />
+                </Field>
+              ))}
+            </div>
+            <div className="mt-4">
+              <Field
+                label={contactFormFields[2].label}
+                error={errors[contactFormFields[2].name]?.message}
+              >
                 <input
-                  {...register("name")}
+                  {...register(contactFormFields[2].name)}
+                  type={contactFormFields[2].type}
                   className="w-full rounded-xl border border-border bg-background/40 px-4 py-3 text-sm outline-none transition focus:border-gold"
-                  placeholder="Chef Antoine"
-                />
-              </Field>
-              <Field label="Email" error={errors.email?.message}>
-                <input
-                  type="email"
-                  {...register("email")}
-                  className="w-full rounded-xl border border-border bg-background/40 px-4 py-3 text-sm outline-none transition focus:border-gold"
-                  placeholder="you@restaurant.com"
+                  placeholder={contactFormFields[2].placeholder}
                 />
               </Field>
             </div>
             <div className="mt-4">
-              <Field label="Company / Venue (optional)" error={errors.company?.message}>
-                <input
-                  {...register("company")}
-                  className="w-full rounded-xl border border-border bg-background/40 px-4 py-3 text-sm outline-none transition focus:border-gold"
-                  placeholder="Maison Lumière"
-                />
-              </Field>
-            </div>
-            <div className="mt-4">
-              <Field label="How can I help?" error={errors.message?.message}>
+              <Field
+                label={contactFormFields[3].label}
+                error={errors[contactFormFields[3].name]?.message}
+              >
                 <textarea
                   rows={5}
-                  {...register("message")}
+                  {...register(contactFormFields[3].name)}
                   className="w-full resize-none rounded-xl border border-border bg-background/40 px-4 py-3 text-sm outline-none transition focus:border-gold"
-                  placeholder="We have 4 branches and want a unified POS + online ordering…"
+                  placeholder={contactFormFields[3].placeholder}
                 />
               </Field>
             </div>
@@ -107,7 +105,7 @@ export function Contact() {
               disabled={isSubmitting}
               className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-gold transition hover:translate-y-[-2px] disabled:opacity-60"
             >
-              {isSubmitting ? "Sending…" : "Send message"}
+              {isSubmitting ? contactMessages.sending : contactMessages.send}
               <Send className="h-4 w-4" />
             </button>
           </form>

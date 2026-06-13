@@ -15,8 +15,8 @@ export function Projects() {
       <div className="mx-auto max-w-7xl px-4">
         <SectionHeading
           eyebrow="Featured Work"
-          title="Projects that move kitchens"
-          subtitle="Selected systems shipped for restaurant groups, independent cafes, and cloud kitchens. Click any card for the full story."
+          title="Full-Stack Systems That Drive Revenue"
+          subtitle="Selected projects built for restaurant groups, independent cafes, and multi-branch operations. Click any card to learn how each system improves operations and guest satisfaction."
         />
 
         <div className="mb-10 flex flex-wrap justify-center gap-2">

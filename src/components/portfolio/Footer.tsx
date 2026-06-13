@@ -1,4 +1,5 @@
-import { ChefHat, Github, Linkedin, Twitter } from "lucide-react";
+import { ChefHat } from "lucide-react";
+import { socialLinks, footerBrand, footerCopyright } from "@/data/footer";
 
 export function Footer() {
   return (
@@ -9,18 +10,22 @@ export function Footer() {
             <ChefHat className="h-4 w-4" />
           </span>
           <span className="font-display text-base">
-            Maison<span className="text-gradient-gold">.dev</span>
+            {footerBrand.name} <span className="text-gradient-gold">{footerBrand.highlight}</span>
           </span>
         </div>
         <p className="text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Maison.dev — Crafted for the hospitality industry.
+          {footerCopyright.prefix}
+          {new Date().getFullYear()}
+          {footerCopyright.suffix}
         </p>
         <div className="flex gap-2">
-          {[Github, Linkedin, Twitter].map((Icon, i) => (
+          {socialLinks.map(({ icon: Icon, href, label }, i) => (
             <a
               key={i}
-              href="#"
-              aria-label="Social link"
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
               className="grid h-9 w-9 place-items-center rounded-full glass text-muted-foreground transition hover:text-gold"
             >
               <Icon className="h-4 w-4" />

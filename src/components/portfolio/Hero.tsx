@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
+import { heroData, heroStats } from "@/data/hero";
 
 export function Hero() {
   return (
@@ -24,7 +25,7 @@ export function Hero() {
           className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs text-muted-foreground"
         >
           <Sparkles className="h-3.5 w-3.5 text-gold" />
-          Available for restaurant & cafe projects
+          {heroData.badge}
         </motion.div>
 
         <motion.h1
@@ -33,10 +34,10 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.05 }}
           className="text-balance text-4xl font-semibold leading-[1.05] sm:text-6xl md:text-7xl"
         >
-          Full-Stack Developer
+          {heroData.name}
           <br />
-          <span className="text-gradient-gold">Restaurant & Cafe</span>
-          <br className="hidden sm:block" /> Systems Specialist
+          <span className="text-gradient-gold">{heroData.title}</span>
+          <br className="hidden sm:block" /> {heroData.subtitle}
         </motion.h1>
 
         <motion.p
@@ -45,9 +46,7 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="mx-auto mt-6 max-w-2xl text-balance text-base text-muted-foreground sm:text-lg"
         >
-          I build the digital backbone of modern F&B — POS, online ordering, kitchen
-          display systems, QR menus, table management, and loyalty platforms that
-          your team and your guests actually love.
+          {heroData.description}
         </motion.p>
 
         <motion.div
@@ -57,17 +56,17 @@ export function Hero() {
           className="mt-10 flex flex-wrap items-center justify-center gap-3"
         >
           <a
-            href="#projects"
+            href={heroData.cta.primary.href}
             className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-gold transition hover:translate-y-[-2px]"
           >
-            View My Work
+            {heroData.cta.primary.text}
             <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
           </a>
           <a
-            href="#contact"
+            href={heroData.cta.secondary.href}
             className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-medium transition hover:border-gold"
           >
-            Get In Touch
+            {heroData.cta.secondary.text}
           </a>
         </motion.div>
 
@@ -77,14 +76,10 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.5 }}
           className="mx-auto mt-16 grid max-w-3xl grid-cols-3 gap-4"
         >
-          {[
-            { v: "120+", l: "Venues Served" },
-            { v: "1.2k+", l: "Orders / Day" },
-            { v: "65%", l: "Faster Service" },
-          ].map((s) => (
-            <div key={s.l} className="glass rounded-2xl p-5 text-center">
-              <div className="font-display text-3xl text-gradient-gold">{s.v}</div>
-              <div className="mt-1 text-xs text-muted-foreground">{s.l}</div>
+          {heroStats.map((s) => (
+            <div key={s.label} className="glass rounded-2xl p-5 text-center">
+              <div className="font-display text-3xl text-gradient-gold">{s.value}</div>
+              <div className="mt-1 text-xs text-muted-foreground">{s.label}</div>
             </div>
           ))}
         </motion.div>

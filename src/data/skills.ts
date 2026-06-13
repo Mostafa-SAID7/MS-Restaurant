@@ -2,7 +2,6 @@ import {
   Code2,
   Server,
   Utensils,
-  Smartphone,
   Database,
 } from "lucide-react";
 
@@ -10,15 +9,15 @@ export const skillGroups = [
   {
     title: "Frontend",
     icon: Code2,
-    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    items: ["React", "Angular", "Next.js", "Vue.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
   },
   {
     title: "Backend",
     icon: Server,
-    items: ["Node.js", "NestJS", "Express", "Firebase", "REST & GraphQL"],
+    items: ["Node.js", "NestJS", "Express", "ASP.NET", "PHP", "REST & GraphQL", "Firebase"],
   },
   {
-    title: "Restaurant Tech",
+    title: "Restaurant & Cafe Systems",
     icon: Utensils,
     items: [
       "POS Systems",
@@ -27,41 +26,37 @@ export const skillGroups = [
       "QR Menus",
       "Table Reservation",
       "Loyalty Programs",
-      "Stripe / PayPal / Local Gateways",
+      "Order Tracking",
+      "Stripe / PayPal / Local Payment Gateways",
     ],
   },
   {
-    title: "Mobile",
-    icon: Smartphone,
-    items: ["React Native", "Expo", "Push Notifications", "Offline-first"],
-  },
-  {
-    title: "Data & Infra",
+    title: "Databases & Infrastructure",
     icon: Database,
-    items: ["PostgreSQL", "MongoDB", "Redis", "WebSockets", "Docker"],
+    items: ["PostgreSQL", "MongoDB", "MySQL", "SQL Server", "Redis", "WebSockets", "Docker"],
   },
 ];
 
 export const experience = [
   {
-    year: "2023 — Present",
-    role: "Lead Full-Stack Engineer · Restaurant Tech",
-    company: "Independent / F&B Clients",
+    year: "2020 — Present",
+    role: "Full-Stack Developer · Restaurant & Cafe Systems",
+    company: "Independent / Hospitality Clients",
     description:
-      "Designing and shipping end-to-end systems for restaurant groups across MENA — POS, KDS, ordering, and analytics.",
+      "4+ years building end-to-end systems for restaurants, cafes, and multi-branch F&B operations. Specialized in POS, online ordering, KDS, QR menus, and analytics platforms.",
   },
   {
-    year: "2021 — 2023",
-    role: "Senior Full-Stack Developer",
-    company: "Hospitality SaaS Studio",
+    year: "2022 — 2024",
+    role: "Full-Stack Engineer",
+    company: "Various F&B Projects",
     description:
-      "Built multi-tenant ordering and loyalty platforms used by 100+ cafes and cloud kitchens.",
+      "Architected and shipped multi-tenant ordering platforms, loyalty systems, and integrated payment solutions for 50+ hospitality venues.",
   },
   {
-    year: "2019 — 2021",
+    year: "2020 — 2022",
     role: "Full-Stack Developer",
-    company: "F&B Startup",
+    company: "Restaurant Technology Startup",
     description:
-      "Launched the first version of a QR-menu and table-ordering product, scaling to 80+ venues.",
+      "Launched comprehensive F&B management systems including QR-menus, table-ordering, and real-time kitchen management for 20+ locations.",
   },
 ];

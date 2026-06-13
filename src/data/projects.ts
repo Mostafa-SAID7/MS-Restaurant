@@ -5,7 +5,7 @@ import dashboard from "@/assets/project-dashboard.jpg";
 import loyalty from "@/assets/project-loyalty.jpg";
 import hero from "@/assets/hero.jpg";
 
-export type Category = "POS" | "Online Ordering" | "QR Menu" | "Full Systems" | "Mobile Apps";
+export type Category = "POS" | "Online Ordering" | "QR Menu" | "Full Systems" | "Analytics";
 
 export interface Project {
   id: string;
@@ -29,7 +29,7 @@ export const projects: Project[] = [
     description:
       "Lightning-fast POS synced in real time with a KDS that orchestrates the kitchen line.",
     longDescription:
-      "A complete front-of-house and back-of-house system: servers ring orders on tablets, items appear instantly on station-specific KDS screens, and timers help the line stay coordinated. Built for the speed of a Friday-night service.",
+      "A complete front-of-house and back-of-house system: servers ring orders on tablets, items appear instantly on station-specific KDS screens, and timers help the line stay coordinated. Built for the speed of a Friday-night service. Full-stack built with React, Node.js, and PostgreSQL.",
     image: pos,
     gallery: [pos, hero, dashboard],
     category: "POS",
@@ -41,6 +41,7 @@ export const projects: Project[] = [
       "Course-by-course order pacing",
       "Split bills, discounts, tips, and tax presets",
       "Receipt printing & integrated payment terminals",
+      "Multi-branch synchronization",
     ],
     demoUrl: "https://example.com/demo/pos",
   },
@@ -49,18 +50,19 @@ export const projects: Project[] = [
     title: "Multi-Branch Online Ordering Platform",
     description: "A marketplace with multi-branch routing, live tracking, and a vendor dashboard.",
     longDescription:
-      "A Talabat-style ordering platform: customers browse multiple brands and branches, get routed to the nearest kitchen, pay online, and track their order live. Vendors get a complete dashboard to manage menus, hours, and orders.",
+      "A complete ordering ecosystem: customers browse multiple brands and branches, get routed intelligently, pay securely, and track orders live. Vendors get a comprehensive dashboard to manage menus, hours, inventory, and orders. Built with Next.js frontend and NestJS backend.",
     image: ordering,
     gallery: [ordering, loyalty, dashboard],
     category: "Online Ordering",
     tech: ["Next.js", "NestJS", "MongoDB", "Stripe", "Mapbox"],
     metrics: ["Handled 1,200+ orders/day", "30+ vendors onboarded", "4.8★ user rating"],
     features: [
-      "Branch routing based on geolocation",
-      "Live driver tracking and ETA",
-      "Vendor admin: menus, hours, promos",
-      "Multi-currency & multi-language",
-      "Stripe + local payment gateways",
+      "Smart branch routing based on geolocation",
+      "Live order tracking and real-time updates",
+      "Vendor admin: comprehensive menus, hours, promos",
+      "Multi-currency & multi-language support",
+      "Stripe + local payment gateway integration",
+      "Advanced analytics and reporting",
     ],
     demoUrl: "https://example.com/demo/ordering",
     caseStudyUrl: "https://example.com/case/ordering",
@@ -70,18 +72,19 @@ export const projects: Project[] = [
     title: "Digital QR Menu & Table Ordering",
     description: "Contactless dining: scan, browse, order, and pay — all from the table.",
     longDescription:
-      "Each table gets a QR code. Guests scan to view a rich-media menu, order without flagging down a server, and pay directly from their phone. Optimized for conversion: average ticket sizes climb noticeably after launch.",
+      "Transform the guest experience: each table gets a QR code linking to a beautiful digital menu. Guests browse, customize orders, and pay directly from their phone. Built with React and Tailwind for responsive design, Firebase for real-time sync, and Stripe for payments.",
     image: qr,
     gallery: [qr, loyalty, hero],
     category: "QR Menu",
-    tech: ["React", "Tailwind", "Firebase", "Stripe"],
+    tech: ["React", "Tailwind CSS", "Firebase", "Stripe"],
     metrics: ["+38% avg ticket size", "Deployed to 80+ venues", "<2s scan-to-order"],
     features: [
       "Rich media menus with allergen filters",
       "Table-aware ordering & calling for service",
-      "Split-the-bill at the table",
+      "Split-the-bill functionality at the table",
       "Multi-language with auto-detect",
-      "Branded per venue (logo, fonts, colors)",
+      "Fully customizable per venue (logo, fonts, colors)",
+      "Real-time inventory sync",
     ],
     demoUrl: "https://example.com/demo/qr",
   },
@@ -90,38 +93,40 @@ export const projects: Project[] = [
     title: "Restaurant Management Dashboard",
     description: "Unified analytics, inventory, staff scheduling, and financial reporting.",
     longDescription:
-      "The operator's command center. Real-time KPIs across branches, inventory and waste tracking, staff scheduling, and exportable reports built for accountants — all in one dark, focused interface.",
+      "The operator's command center. Real-time KPIs across branches, inventory tracking, staff scheduling, and comprehensive financial reports. Built with React frontend, NestJS backend, PostgreSQL database, and advanced charting with Recharts.",
     image: dashboard,
     gallery: [dashboard, pos, ordering],
     category: "Full Systems",
     tech: ["React", "NestJS", "PostgreSQL", "Recharts", "Redis"],
-    metrics: ["Saves 12 hours/week per branch", "Real-time KPIs", "Multi-currency"],
+    metrics: ["Saves 12 hours/week per branch", "Real-time KPIs across locations", "Multi-currency"],
     features: [
       "Sales, labor, and food cost KPIs",
-      "Inventory with low-stock alerts",
+      "Inventory tracking with low-stock alerts",
       "Staff scheduling & timesheets",
-      "Branch comparison reports",
+      "Branch comparison & export reports",
       "Role-based access for owners & managers",
+      "Integration with accounting software",
     ],
     demoUrl: "https://example.com/demo/dashboard",
   },
   {
-    id: "loyalty-app",
-    title: "Cafe Loyalty & CRM Mobile App",
-    description: "A native-feeling loyalty app that turns one-time guests into regulars.",
+    id: "loyalty-program",
+    title: "Cafe Loyalty & CRM Program",
+    description: "Digital loyalty platform that turns one-time guests into regulars.",
     longDescription:
-      "Stamp cards, points, and personalized offers powered by a CRM that segments guests by behavior. Push notifications bring people back; in-app ordering keeps them inside your ecosystem.",
+      "A comprehensive loyalty system with digital stamp cards, points-based rewards, and CRM functionality. Target guests with personalized offers based on behavior patterns. Built with React frontend and Node.js/NestJS backend with MongoDB for flexible data modeling.",
     image: loyalty,
     gallery: [loyalty, qr, ordering],
-    category: "Mobile Apps",
-    tech: ["React Native", "Firebase", "Node.js", "Stripe"],
-    metrics: ["+52% repeat visits", "20k+ active users", "4.9★ App Store"],
+    category: "Analytics",
+    tech: ["React", "NestJS", "MongoDB", "Stripe", "SendGrid"],
+    metrics: ["+52% repeat visits", "20k+ active members", "4.8★ ratings"],
     features: [
       "Digital stamp cards and tiered rewards",
       "Personalized offers via CRM segments",
-      "In-app ordering and pre-pay",
-      "Push notifications for new drops",
+      "Web-based member portal",
+      "Email campaigns and notifications",
       "Referral program with tracking",
+      "Advanced analytics on member behavior",
     ],
     demoUrl: "https://example.com/demo/loyalty",
   },
@@ -133,5 +138,5 @@ export const categories: ("All" | Category)[] = [
   "Online Ordering",
   "QR Menu",
   "Full Systems",
-  "Mobile Apps",
+  "Analytics",
 ];

@@ -10,9 +10,9 @@ import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
 import { SmoothScroll } from "@/components/portfolio/SmoothScroll";
 
-const SITE_TITLE = "Maison.dev — Full-Stack Developer for Restaurants & Cafes";
+const SITE_TITLE = "Mostafa Said — Full-Stack Developer | Restaurant & Cafe Systems";
 const SITE_DESCRIPTION =
-  "Premium full-stack development for restaurants and cafes: POS, KDS, online ordering, QR menus, table management, loyalty, and analytics.";
+  "Full-Stack developer specializing in restaurant and cafe management systems: POS, KDS, online ordering, QR menus, loyalty programs, and analytics. 4+ years experience with React, Angular, Next.js, Node.js, NestJS, ASP.NET.";
 const OG_IMAGE = "/og-image.jpg";
 
 export const Route = createFileRoute("/")({
@@ -23,9 +23,9 @@ export const Route = createFileRoute("/")({
       {
         name: "keywords",
         content:
-          "restaurant developer, cafe developer, POS system, KDS, online ordering, QR menu, restaurant software, hospitality tech, full-stack developer",
+          "Full-Stack Developer, Mostafa Said, Restaurant Systems, POS System, KDS, Kitchen Display, Online Ordering, QR Menu, React, Node.js, NestJS, ASP.NET, MongoDB, PostgreSQL, Egypt",
       },
-      { name: "author", content: "Maison.dev" },
+      { name: "author", content: "Mostafa Said" },
       { name: "robots", content: "index, follow" },
       { name: "theme-color", content: "#E8C547" },
 
@@ -33,17 +33,17 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: SITE_DESCRIPTION },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
-      { property: "og:site_name", content: "Maison.dev" },
+      { property: "og:site_name", content: "Mostafa Said - Full-Stack Developer" },
       { property: "og:image", content: OG_IMAGE },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Maison.dev — Restaurant & Cafe Systems Specialist" },
+      { property: "og:image:alt", content: "Mostafa Said — Full-Stack Developer for Restaurant & Cafe Systems" },
 
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: SITE_TITLE },
       { name: "twitter:description", content: SITE_DESCRIPTION },
       { name: "twitter:image", content: OG_IMAGE },
-      { name: "twitter:image:alt", content: "Maison.dev portfolio preview" },
+      { name: "twitter:image:alt", content: "Mostafa Said portfolio preview" },
     ],
     links: [{ rel: "canonical", href: "/" }],
     scripts: [
@@ -52,9 +52,15 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Person",
-          name: "Maison.dev",
+          name: "Mostafa Said",
           jobTitle: "Full-Stack Developer · Restaurant & Cafe Systems Specialist",
           description: SITE_DESCRIPTION,
+          email: "m.ssaid356@gmail.com",
+          telephone: "+201067358073",
+          sameAs: [
+            "https://github.com/Mostafa-SAID7",
+            "https://www.linkedin.com/in/mostafasamirsaid"
+          ],
           knowsAbout: [
             "Point of Sale",
             "Kitchen Display Systems",
@@ -62,6 +68,13 @@ export const Route = createFileRoute("/")({
             "QR Menus",
             "Restaurant Management Software",
             "Loyalty Programs",
+            "Full-Stack Development",
+            "React",
+            "Node.js",
+            "NestJS",
+            "ASP.NET",
+            "Angular",
+            "Vue.js",
           ],
           url: "/",
         }),
