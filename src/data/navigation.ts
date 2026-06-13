@@ -16,7 +16,12 @@ export const brandData = {
   highlight: "Said",
 };
 
+export const contactInfo = {
+  whatsapp: "+201067358073",
+  whatsappUrl: "https://wa.me/201067358073",
+};
+
 export const ctaButton = {
   text: "Hire me",
-  href: "#contact",
+  href: contactInfo.whatsappUrl,
 };
