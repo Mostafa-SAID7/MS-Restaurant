@@ -1,0 +1,53 @@
+import hero from "@/assets/hero.jpg";
+
+export const burgerDeliveryProject = {
+  id: "burger-delivery",
+  title: "Burger Delivery — Fast Food Ordering Platform",
+  description:
+    "Modern, fast-paced burger delivery web application with seamless online food ordering, menu browsing, order customization, cart management, and intuitive mobile-first checkout.",
+  longDescription:
+    "A dynamic burger delivery platform focused on providing a seamless online food ordering experience optimized for speed and visual appeal. Customers can browse a delicious menu of burgers and sides, customize their orders with detailed options, manage their shopping cart in real-time, and complete checkout through an intuitive, mobile-first interface. The platform emphasizes fast load times, visual engagement, and smooth user flows tailored specifically for quick-service restaurants. Built with modern React practices and deployed for production performance.",
+  image: hero,
+  gallery: [hero],
+  category: "Full Systems" as const,
+  tech: [
+    "React 18/19",
+    "Vite",
+    "TypeScript",
+    "Tailwind CSS",
+    "Framer Motion",
+    "React Router",
+    "Context API",
+    "Zustand",
+    "shadcn/ui",
+    "Netlify",
+  ],
+  metrics: [
+    "Complete customer ordering flow: menu browsing with advanced filters, item customization, real-time cart management",
+    "Seamless checkout process with clear call-to-actions and intuitive navigation",
+    "Highly responsive, visually engaging UI with smooth animations and fast loading times",
+    "Excellent mobile-first experience optimized for on-the-go ordering",
+    "Clean component architecture following modern React best practices",
+    "Production-ready deployment with continuous optimization",
+    "Optimized for conversion with appealing food photography integration",
+    "Performance-focused with minimal bundle size and fast initial load",
+  ],
+  features: [
+    "Browse menu with category filtering",
+    "Item search and sorting",
+    "Detailed item pages with descriptions and pricing",
+    "Customization options for burgers and sides",
+    "Real-time shopping cart management",
+    "Cart persistence and recovery",
+    "Smooth add-to-cart animations",
+    "Quantity adjustment",
+    "Promo/discount code application",
+    "Order review and confirmation",
+    "Responsive mobile-first design",
+    "Fast loading and smooth animations",
+    "Intuitive navigation and CTAs",
+    "Professional food photography showcase",
+    "Guest checkout option",
+  ],
+  demoUrl: "https://burger-delivery73.netlify.app",
+};
