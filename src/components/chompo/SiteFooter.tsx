@@ -1,3 +1,4 @@
+import { useReveal } from "@/hooks/use-reveal";
 import { ChickenLegIcon, PizzaIcon, SandwichIcon } from "./FoodIcons";
 
 const MENU_LINKS = ["Home", "Projects", "Experience", "Skills", "Contact"];
@@ -36,8 +37,13 @@ function FooterNav({ title, items }: { title: string; items: string[] }) {
 }
 
 export function SiteFooter() {
+  const { ref, isVisible } = useReveal<HTMLElement>();
+
   return (
-    <footer className="relative overflow-hidden bg-ink pt-12 text-cream sm:pt-14">
+    <footer
+      ref={ref}
+      className={`motion-reveal relative overflow-hidden bg-ink pt-12 text-cream sm:pt-14 ${isVisible ? "is-visible" : ""}`}
+    >
       <div className="mx-auto grid max-w-[1180px] gap-x-12 gap-y-10 px-6 sm:grid-cols-[1.3fr_0.8fr] lg:grid-cols-[1.5fr_0.8fr_1fr]">
         {/* Brand + newsletter */}
         <div>
@@ -63,7 +69,7 @@ export function SiteFooter() {
             />
             <button
               type="submit"
-              className="shrink-0 rounded-full bg-signal px-5 py-2 font-heavy text-xs tracking-[0.1em] text-cream uppercase transition-transform hover:-translate-y-0.5"
+              className="button-depth shrink-0 rounded-full bg-signal px-5 py-2 font-heavy text-xs tracking-[0.1em] text-cream uppercase"
             >
               Join
             </button>

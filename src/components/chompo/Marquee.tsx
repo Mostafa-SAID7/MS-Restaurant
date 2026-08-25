@@ -18,9 +18,9 @@ export function Marquee({
   durationSeconds = 28,
 }: MarqueeProps) {
   return (
-    <div className={`overflow-hidden ${className}`}>
+    <div className={`group overflow-hidden ${className}`}>
       <div
-        className={`flex w-max ${reverse ? "animate-ticker-reverse" : "animate-ticker"}`}
+        className={`flex w-max will-change-transform group-hover:[animation-play-state:paused] ${reverse ? "animate-ticker-reverse" : "animate-ticker"}`}
         style={{ animationDuration: `${durationSeconds}s` }}
       >
         <div className="flex shrink-0 items-center">{children}</div>

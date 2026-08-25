@@ -1,3 +1,5 @@
+import { useReveal } from "@/hooks/use-reveal";
+
 const WORD = "MOSTAFA";
 
 /** Ring geometry inside a 600x600 viewBox, largest outside -> smallest inside. */
@@ -27,9 +29,13 @@ function ringText(radius: number, size: number) {
 
 /** Concentric rings of "CHOMPO" curved smoothly around a line-art face. */
 export function TypeSpiral() {
+  const { ref, isVisible } = useReveal<HTMLElement>();
+
   return (
-    <section className="bg-cream px-4 pt-10 pb-20 sm:px-6">
-      <div className="relative mx-auto aspect-square w-full max-w-[640px]">
+    <section ref={ref} className="bg-cream px-4 pt-10 pb-20 sm:px-6">
+      <div
+        className={`motion-reveal relative mx-auto aspect-square w-full max-w-[640px] ${isVisible ? "is-visible" : ""}`}
+      >
         <svg
           viewBox="0 0 600 600"
           className="absolute inset-0 h-full w-full select-none"
@@ -79,7 +85,7 @@ export function TypeSpiral() {
         {TAGS.map((tag) => (
           <span
             key={tag.label}
-            className={`absolute ${tag.className} rounded-full border-[3px] border-ink bg-signal px-4 py-1.5 font-heavy text-xs text-cream sm:text-sm`}
+            className={`absolute ${tag.className} rounded-full border-[3px] border-ink bg-signal px-4 py-1.5 font-heavy text-xs text-cream transition-[transform,box-shadow] duration-300 hover:scale-105 hover:shadow-[4px_4px_0_var(--ink)] sm:text-sm`}
           >
             {tag.label}
           </span>

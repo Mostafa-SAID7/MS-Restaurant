@@ -1,8 +1,13 @@
+import { useReveal } from "@/hooks/use-reveal";
 import { Cloud } from "./FoodIcons";
 
 export function FlavorCta() {
+  const { ref, isVisible } = useReveal<HTMLElement>();
   return (
-    <section className="relative overflow-hidden bg-cream px-4 pt-16 pb-0 sm:px-6">
+    <section
+      ref={ref}
+      className={`motion-reveal relative overflow-hidden bg-cream px-4 pt-16 pb-0 sm:px-6 ${isVisible ? "is-visible" : ""}`}
+    >
       {/* doodle clouds */}
       <div
         className="pointer-events-none absolute inset-x-0 top-0 h-64 text-ink"

@@ -1,3 +1,5 @@
+import { useReveal } from "@/hooks/use-reveal";
+
 interface Review {
   text: string;
   author: string;
@@ -48,9 +50,11 @@ const REVIEWS: Review[] = [
 ];
 
 export function Reviews() {
+  const { ref, isVisible } = useReveal<HTMLElement>();
+
   return (
-    <section id="reviews" className="bg-cream px-6 py-12 sm:py-16">
-      <div className="mx-auto max-w-6xl">
+    <section ref={ref} id="reviews" className="bg-cream px-6 py-12 sm:py-16">
+      <div className={`motion-reveal mx-auto max-w-6xl ${isVisible ? "is-visible" : ""}`}>
         <p className="text-center font-body text-[clamp(9px,1.1vw,11px)] tracking-[0.42em] text-ink/55">
           TESTIMONIALS
         </p>
@@ -66,7 +70,7 @@ export function Reviews() {
           {REVIEWS.map((review, index) => (
             <article
               key={index}
-              className={`absolute w-[clamp(170px,14vw,210px)] min-h-[260px] p-5 shadow-[8px_8px_28px_var(--shadow-strong)] transition-transform duration-300 hover:z-20 ${
+              className={`absolute w-[clamp(170px,14vw,210px)] min-h-[260px] p-5 shadow-[8px_8px_28px_var(--shadow-strong)] transition-[filter,box-shadow] duration-300 hover:z-20 hover:brightness-110 ${
                 review.tone === "signal" ? "bg-signal" : "bg-ink"
               }`}
               style={{
@@ -96,7 +100,7 @@ export function Reviews() {
         <div className="mt-[60px] text-center">
           <button
             type="button"
-            className="border-[1.5px] border-ink px-8 py-2.5 font-display text-[clamp(9px,1.1vw,12px)] tracking-[0.28em] text-ink transition-colors duration-200 hover:bg-ink hover:text-cream"
+            className="button-depth rounded-full border-[1.5px] border-ink px-8 py-2.5 font-display text-[clamp(9px,1.1vw,12px)] tracking-[0.28em] text-ink transition-colors duration-200 hover:bg-ink hover:text-cream"
           >
             READ MORE ABOUT ME
           </button>
