@@ -63,9 +63,9 @@ export function KhidaSection() {
           JOIN THE FLAVOR REVOLUTION!
         </p>
         <h2 className="mt-2 font-display text-[clamp(24px,4.2vw,56px)] leading-[1.05] tracking-[0.04em] text-ink">
-          FUEL UP WITH
+          FULL STACK
           <br />
-          CHOMPO!
+          ENGINEERING!
         </h2>
       </div>
 
@@ -155,13 +155,13 @@ export function KhidaSection() {
             </div>
           </div>
 
-          {/* CHOMPO CALL button */}
+          {/* LET&apos;S CONNECT button */}
           <div className="mt-8">
             <button
               type="button"
               className="khida-dashed inline-flex items-center gap-2 rounded-[30px] border-2 border-dashed border-cream/55 bg-transparent px-7 py-[11px] font-display text-[clamp(10px,1.3vw,13px)] tracking-[0.22em] text-cream transition-colors hover:bg-cream/10"
             >
-              <span className="animate-[spin_5s_linear_infinite] inline-block">★</span> CHOMPO CALL
+              <span className="animate-[spin_5s_linear_infinite] inline-block">★</span> LET&apos;S CONNECT
             </button>
           </div>
         </div>

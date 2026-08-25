@@ -1,4 +1,4 @@
-/** Hand-drawn style CHOMPO storefront, cream lines on red. */
+/** Hand-drawn style PORTFOLIO storefront, cream lines on red. */
 export function Storefront({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 720 400" className={className} aria-hidden="true">
@@ -24,7 +24,7 @@ export function Storefront({ className = "" }: { className?: string }) {
           fontFamily="Anton, sans-serif"
           fontSize="66"
         >
-          CHOMPO
+          PORTFOLIO
         </text>
 
         {/* building */}

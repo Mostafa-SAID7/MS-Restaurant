@@ -1,11 +1,11 @@
 import { ChickenLegIcon, PizzaIcon, SandwichIcon } from "./FoodIcons";
 
-const MENU_LINKS = ["Home", "Product", "Recipes", "Shop", "Locations"];
+const MENU_LINKS = ["Home", "Projects", "Experience", "Skills", "Contact"];
 const COMPANY_LINKS = ["About Us", "Careers", "Terms of Use", "Privacy Policy", "The Team"];
 
 const SOCIALS = [
   {
-    label: "Facebook",
+    label: "LinkedIn",
     path: "M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.29-.04-1.27-.12-2.41-.12-2.39 0-4.03 1.46-4.03 4.14v2.28H7.5V13h2.76v8z",
   },
   {
@@ -42,10 +42,9 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-[1180px] gap-x-10 gap-y-12 px-6 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.2fr]">
         {/* Brand + newsletter */}
         <div>
-          <p className="font-display text-3xl leading-none tracking-[0.04em] text-cream">CHOMPO</p>
+          <p className="font-display text-3xl leading-none tracking-[0.04em] text-cream">MOSTAFA SAMIR</p>
           <p className="mt-4 max-w-[22rem] font-oswald text-sm leading-relaxed font-light text-cream/70">
-            Loud flavor, fast hands. Fresh-fired burgers, crispy wings and stone-baked slices —
-            served hot from the Flavor District since 2014.
+            Senior Full Stack Engineer focused on .NET 8, microservices, Clean Architecture, and high-performance web applications.
           </p>
 
           <form
@@ -71,7 +70,7 @@ export function SiteFooter() {
           </form>
         </div>
 
-        <FooterNav title="Menu" items={MENU_LINKS} />
+        <FooterNav title="Portfolio" items={MENU_LINKS} />
         <FooterNav title="Company" items={COMPANY_LINKS} />
 
         <div>
@@ -82,15 +81,15 @@ export function SiteFooter() {
             href="tel:+15550189264"
             className="mt-5 block font-heavy text-sm tracking-[0.06em] text-signal transition-colors hover:text-cream"
           >
-            +1 (555) 018 9264
+            +20 106 735 8073
           </a>
           <address className="mt-3 max-w-[16rem] font-oswald text-sm leading-relaxed font-light text-cream/70 not-italic">
-            2140 Crispy Lane, Suite 12
+            Tanta, Egypt
             <br />
-            Flavor District, Los Angeles, CA
+            Available for full-stack opportunities
           </address>
           <p className="mt-3 font-oswald text-sm font-light text-cream/70">
-            Open daily · 11:00 — 01:00
+            English professional · Arabic native
           </p>
 
           <div className="mt-5 flex items-center gap-3 text-signal">
@@ -131,7 +130,7 @@ export function SiteFooter() {
       {/* giant wordmark */}
       <div className="relative mt-14 px-2">
         <p className="footer-wordmark text-center font-display text-[19vw] leading-[1.05] whitespace-nowrap text-cream">
-          CHOMPO
+          MOSTAFA SAMIR
         </p>
         <div
           aria-hidden="true"
@@ -145,10 +144,10 @@ export function SiteFooter() {
 
       <div className="mx-auto flex max-w-[1180px] flex-col items-center justify-between gap-3 border-t border-cream/15 px-6 py-6 text-center sm:flex-row sm:text-left">
         <p className="font-oswald text-xs font-light tracking-[0.14em] text-cream/50 uppercase">
-          © {new Date().getFullYear()} Chompo Foods. All rights reserved.
+          © {new Date().getFullYear()} Mostafa Samir. All rights reserved.
         </p>
         <p className="font-oswald text-xs font-light tracking-[0.14em] text-cream/50 uppercase">
-          Made with extra sauce in Los Angeles
+          Crafted with clean code from Egypt
         </p>
       </div>
     </footer>

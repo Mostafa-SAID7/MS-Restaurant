@@ -13,12 +13,12 @@ export function FlavorCta() {
 
       <div className="relative mx-auto max-w-[1120px] text-center">
         <p className="font-display text-lg tracking-[0.02em] text-ink sm:text-2xl">
-          JOIN THE FLAVOR REVOLUTION!
+          LET&apos;S BUILD THE FUTURE!
         </p>
         <h2 className="mt-2 font-display text-4xl leading-[0.95] text-ink sm:text-6xl lg:text-7xl">
-          FUEL UP WITH
+          BUILD WITH
           <br />
-          CHOMPO!
+          MOSTAFA!
         </h2>
 
         {/* 3D carton */}

@@ -10,7 +10,7 @@ interface Review {
 
 const REVIEWS: Review[] = [
   {
-    text: "I LOVE HOW CHOMPO KEEPS THINGS SIMPLE BUT SO FLAVORFUL. THE FRIES ARE CRISPY AND THE BURGERS — ABSOLUTE PERFECTION!",
+    text: "I LOVE HOW MOSTAFA KEEPS THINGS SIMPLE BUT SO FLAVORFUL. THE FRIES ARE CRISPY AND THE BURGERS — ABSOLUTE PERFECTION!",
     author: "SARAH CHEN",
     role: "🍔 BURGER LOVER",
     tone: "signal",
@@ -19,7 +19,7 @@ const REVIEWS: Review[] = [
     offsetY: 10,
   },
   {
-    text: "THIS IS NOT JUST FOOD. IT'S AN EXPERIENCE. EVERY BITE IS CRISPY, JUICY, AND FULL OF FLAVOR. CHOMPO IS MY GO-TO!",
+    text: "THIS IS NOT JUST FOOD. IT'S AN EXPERIENCE. EVERY BITE IS CRISPY, JUICY, AND FULL OF FLAVOR. MOSTAFA IS MY GO-TO!",
     author: "JAMES TUCKER",
     role: "FOOD CRITIC",
     tone: "ink",
@@ -28,7 +28,7 @@ const REVIEWS: Review[] = [
     offsetY: -8,
   },
   {
-    text: "ORDERING FROM CHOMPO IS ALWAYS EASY AND THE DELIVERY IS FAST! THE TASTE IS UNMATCHED AND THE VIBE FEELS REALLY GENUINE.",
+    text: "ORDERING FROM MOSTAFA IS ALWAYS EASY AND THE DELIVERY IS FAST! THE TASTE IS UNMATCHED AND THE VIBE FEELS REALLY GENUINE.",
     author: "BURGER PRINCESS",
     role: "🍟 SNACK QUEEN",
     tone: "signal",
@@ -37,7 +37,7 @@ const REVIEWS: Review[] = [
     offsetY: 6,
   },
   {
-    text: "CHOMPO BURGERS HIT THE SPOT EVERY TIME. BOLD FLAVORS, FRESH INGREDIENTS, AND FRIENDLY SERVICE. MY GO-TO FOR A QUICK MEAL!",
+    text: "MOSTAFA BURGERS HIT THE SPOT EVERY TIME. BOLD FLAVORS, FRESH INGREDIENTS, AND FRIENDLY SERVICE. MY GO-TO FOR A QUICK MEAL!",
     author: "DANIEL TUCKER",
     role: "🍟 REGULAR CUSTOMER",
     tone: "ink",
@@ -58,7 +58,7 @@ export function Reviews() {
         <h2 className="mt-2.5 mb-[90px] text-center font-display text-[clamp(28px,5.5vw,70px)] leading-[1.02] tracking-[0.03em] text-ink">
           REAL TALK FROM
           <br />
-          REAL FOODIES
+          REAL TEAMS
         </h2>
 
         {/* fanned stack — large screens */}
@@ -98,7 +98,7 @@ export function Reviews() {
             type="button"
             className="border-[1.5px] border-ink px-8 py-2.5 font-display text-[clamp(9px,1.1vw,12px)] tracking-[0.28em] text-ink transition-colors duration-200 hover:bg-ink hover:text-cream"
           >
-            READ MORE REVIEWS
+            READ MORE ABOUT ME
           </button>
         </div>
       </div>

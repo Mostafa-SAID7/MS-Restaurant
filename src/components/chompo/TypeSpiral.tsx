@@ -1,4 +1,4 @@
-const WORD = "CHOMPO";
+const WORD = "MOSTAFA";
 
 /** Ring geometry inside a 600x600 viewBox, largest outside -> smallest inside. */
 const RINGS = [
@@ -11,9 +11,9 @@ const RINGS = [
 
 
 const TAGS = [
-  { label: "Pizzuuuuuu", className: "top-[20%] right-[-2%] rotate-[-10deg]" },
-  { label: "Sanguiss", className: "top-[54%] left-[-3%] rotate-[8deg]" },
-  { label: "cheazzy", className: "bottom-[18%] right-[10%] rotate-[12deg]" },
+  { label: ".NET 8", className: "top-[20%] right-[-2%] rotate-[-10deg]" },
+  { label: "MICROSERVICES", className: "top-[54%] left-[-3%] rotate-[8deg]" },
+  { label: "REACT + ANGULAR", className: "bottom-[18%] right-[10%] rotate-[12deg]" },
 ];
 
 /** Average glyph advance for the condensed heavy display face, as a ratio of font size. */

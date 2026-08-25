@@ -35,23 +35,23 @@ export function FeaturedSection() {
         <Photo src={burgerBite} alt="Double cheeseburger with fresh lettuce and melted cheese" />
 
         <div className={`${TEXT_TILE} bg-signal`}>
-          <p className={`${LABEL} mb-2 text-cream/75`}>Chompo Motto</p>
+          <p className={`${LABEL} mb-2 text-cream/75`}>Professional Summary</p>
           <p className={`${HEADLINE} mb-6`}>
-            Turn Up The
+            Senior Full Stack
             <br />
-            Flavor, Turn Up
+            Engineer building
             <br />
-            The Fun.
+            scalable systems.
           </p>
-          <span className={PILL}>Chompo</span>
+          <span className={PILL}>FULL STACK</span>
         </div>
 
         <Photo src={chickenHand} alt="Crispy golden fried chicken held in one hand" />
 
         <div className={`${TEXT_TILE} bg-signal`}>
-          <p className={`${LABEL} mb-2 text-cream/75`}>Chompo Spirit</p>
+          <p className={`${LABEL} mb-2 text-cream/75`}>Engineering Focus</p>
           <p className={HEADLINE}>
-            Snack Like
+            Ship Like
             <br />
             You Mean It
           </p>
@@ -84,7 +84,7 @@ export function FeaturedSection() {
             Tells A Story
           </p>
           <button type="button" className={`${PILL} transition-colors hover:bg-cream/10`}>
-            Order Now
+            View Projects
           </button>
         </div>
       </div>
