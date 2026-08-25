@@ -91,7 +91,7 @@ export function FeaturedSection() {
             <br />
             Tells A Story
           </p>
-          <button type="button" className={`${PILL} transition-colors hover:bg-cream/10`}>
+          <button type="button" className={`${PILL} button-depth rounded-full transition-colors hover:bg-cream/10`}>
             View Projects
           </button>
         </div>

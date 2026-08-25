@@ -23,7 +23,7 @@ export function Hero() {
         <div className="absolute -bottom-1 left-1/2 -translate-x-1/2">
           <button
             type="button"
-            className="rounded-full border-[3px] border-ink bg-signal px-6 py-2 font-heavy text-xs tracking-[0.1em] text-cream uppercase transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[4px_5px_0_var(--ink)] sm:px-8 sm:py-2.5 sm:text-sm"
+            className="rounded-full border-[3px] border-ink bg-signal px-6 py-2 font-heavy text-xs tracking-[0.1em] text-cream uppercase button-depth sm:px-8 sm:py-2.5 sm:text-sm"
           >
             View Projects
           </button>

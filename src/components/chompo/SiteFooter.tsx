@@ -69,7 +69,7 @@ export function SiteFooter() {
             />
             <button
               type="submit"
-              className="shrink-0 rounded-full bg-signal px-5 py-2 font-heavy text-xs tracking-[0.1em] text-cream uppercase transition-transform hover:-translate-y-0.5"
+              className="button-depth shrink-0 rounded-full bg-signal px-5 py-2 font-heavy text-xs tracking-[0.1em] text-cream uppercase"
             >
               Join
             </button>

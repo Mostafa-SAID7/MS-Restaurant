@@ -14,7 +14,7 @@ export function Nav() {
           <ThemeToggle />
           <button
             type="button"
-            className="rounded-md bg-cream px-4 py-1.5 font-heavy text-xs tracking-wider text-signal uppercase transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[3px_3px_0_var(--signal)] sm:text-sm"
+            className="button-depth rounded-full bg-cream px-4 py-1.5 font-heavy text-xs tracking-wider text-signal uppercase sm:text-sm"
           >
             Projects
           </button>

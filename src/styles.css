@@ -561,6 +561,21 @@
   transition-delay: 260ms;
 }
 
+.button-depth {
+  transition-property: transform, box-shadow, color, background-color, border-color;
+  transition-duration: 300ms;
+}
+
+.button-depth:hover {
+  transform: translateY(-4px);
+  box-shadow: 4px 5px 0 var(--ink);
+}
+
+.button-depth:active {
+  transform: translateY(-1px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
 .motion-card {
   transition:
     transform 500ms cubic-bezier(0.16, 1, 0.3, 1),
@@ -708,6 +723,7 @@ main > *:not(:first-child) {
     transition: none;
   }
 
+  .button-depth,
   .motion-card,
   .motion-image,
   .motion-band-underlay {
@@ -717,6 +733,12 @@ main > *:not(:first-child) {
   .motion-band-underlay,
   .motion-band-content {
     opacity: 1;
+  }
+
+  .button-depth:hover,
+  .button-depth:active {
+    transform: none;
+    box-shadow: none;
   }
 
   .motion-stagger > * {

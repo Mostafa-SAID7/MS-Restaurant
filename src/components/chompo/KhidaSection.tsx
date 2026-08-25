@@ -123,7 +123,7 @@ export function KhidaSection() {
             {/* Portfolio action */}
             <button
               type="button"
-              className="mb-2.5 w-full cursor-pointer bg-ink px-3 py-2.5 text-center transition-colors hover:bg-signal-dark"
+              className="button-depth mb-2.5 w-full cursor-pointer rounded-full bg-ink px-3 py-2.5 text-center transition-colors hover:bg-signal-dark"
             >
               <p className="mb-0.5 font-display text-[clamp(13px,2vw,18px)] leading-none tracking-[0.1em] text-cream">
                 VIEW
@@ -168,7 +168,7 @@ export function KhidaSection() {
           <div className="mt-8">
             <button
               type="button"
-              className="khida-dashed inline-flex items-center gap-2 rounded-[30px] border-2 border-dashed border-cream/55 bg-transparent px-7 py-[11px] font-display text-[clamp(10px,1.3vw,13px)] tracking-[0.22em] text-cream transition-colors hover:bg-cream/10"
+              className="button-depth khida-dashed inline-flex items-center gap-2 rounded-full border-2 border-dashed border-cream/55 bg-transparent px-7 py-[11px] font-display text-[clamp(10px,1.3vw,13px)] tracking-[0.22em] text-cream transition-colors hover:bg-cream/10"
             >
               <span className="animate-[spin_5s_linear_infinite] inline-block">★</span> LET&apos;S
               CONNECT

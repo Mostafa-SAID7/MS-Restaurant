@@ -100,7 +100,7 @@ export function Reviews() {
         <div className="mt-[60px] text-center">
           <button
             type="button"
-            className="border-[1.5px] border-ink px-8 py-2.5 font-display text-[clamp(9px,1.1vw,12px)] tracking-[0.28em] text-ink transition-colors duration-200 hover:bg-ink hover:text-cream"
+            className="button-depth rounded-full border-[1.5px] border-ink px-8 py-2.5 font-display text-[clamp(9px,1.1vw,12px)] tracking-[0.28em] text-ink transition-colors duration-200 hover:bg-ink hover:text-cream"
           >
             READ MORE ABOUT ME
           </button>
