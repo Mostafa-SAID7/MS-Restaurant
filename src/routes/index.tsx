@@ -10,9 +10,9 @@ import { Reviews } from "@/components/chompo/Reviews";
 import { KhidaSection } from "@/components/chompo/KhidaSection";
 import { SiteFooter } from "@/components/chompo/SiteFooter";
 
-const TITLE = "Mostafa Samir | Senior Full Stack Engineer";
+const TITLE = "M.SAID | Senior Full Stack Engineer";
 const DESCRIPTION =
-  "Senior Full Stack Engineer specializing in .NET 8, microservices, modern web architectures, and scalable marketplace platforms."
+  "Senior Full Stack Engineer specializing in .NET 8, microservices, modern web architectures, and scalable marketplace platforms.";
 
 export const Route = createFileRoute("/")({
   head: () => ({

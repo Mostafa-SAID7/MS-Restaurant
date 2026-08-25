@@ -63,6 +63,7 @@ function Blob({
           loading="lazy"
           width={900}
           height={900}
+          decoding="async"
           className="h-full w-full scale-[1.08] object-cover"
         />
       </div>

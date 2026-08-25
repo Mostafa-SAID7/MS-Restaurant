@@ -38,13 +38,14 @@ function FooterNav({ title, items }: { title: string; items: string[] }) {
 
 export function SiteFooter() {
   return (
-    <footer className="relative overflow-hidden bg-ink pt-16 text-cream">
+    <footer className="relative overflow-hidden bg-ink pt-12 text-cream sm:pt-14">
       <div className="mx-auto grid max-w-[1180px] gap-x-10 gap-y-12 px-6 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.2fr]">
         {/* Brand + newsletter */}
         <div>
-          <p className="font-display text-3xl leading-none tracking-[0.04em] text-cream">MOSTAFA SAMIR</p>
+          <p className="font-display text-3xl leading-none tracking-[0.04em] text-cream">M.SAID</p>
           <p className="mt-4 max-w-[22rem] font-oswald text-sm leading-relaxed font-light text-cream/70">
-            Senior Full Stack Engineer focused on .NET 8, microservices, Clean Architecture, and high-performance web applications.
+            Senior Full Stack Engineer focused on .NET 8, microservices, Clean Architecture, and
+            high-performance web applications.
           </p>
 
           <form

@@ -3,7 +3,7 @@ import { Storefront } from "./Storefront";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-signal pb-10">
+    <section className="relative overflow-hidden bg-signal pb-7 sm:pb-8">
       <Nav />
 
       <div className="mx-auto max-w-[1200px] px-4 pt-10 text-center sm:px-6 sm:pt-16">
@@ -32,7 +32,6 @@ export function Hero() {
 
       {/* cream scalloped edge rising out of the red panel */}
       <div className="bumps-up pointer-events-none absolute -bottom-px left-0 h-[30px] w-full text-cream" />
-
     </section>
   );
 }

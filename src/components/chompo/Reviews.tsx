@@ -49,13 +49,13 @@ const REVIEWS: Review[] = [
 
 export function Reviews() {
   return (
-    <section id="reviews" className="bg-cream px-6 pt-[90px] pb-[100px]">
+    <section id="reviews" className="bg-cream px-6 py-12 sm:py-16">
       <div className="mx-auto max-w-6xl">
         <p className="text-center font-body text-[clamp(9px,1.1vw,11px)] tracking-[0.42em] text-ink/55">
           TESTIMONIALS
         </p>
 
-        <h2 className="mt-2.5 mb-[90px] text-center font-display text-[clamp(28px,5.5vw,70px)] leading-[1.02] tracking-[0.03em] text-ink">
+        <h2 className="mt-2.5 mb-12 text-center font-display text-[clamp(28px,5.5vw,70px)] leading-[1.02] tracking-[0.03em] text-ink">
           REAL TALK FROM
           <br />
           REAL TEAMS
