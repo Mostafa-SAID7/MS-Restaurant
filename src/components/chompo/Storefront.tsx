@@ -23,7 +23,9 @@ export function Storefront({ className = "" }: { className?: string }) {
             fill="var(--ink)"
             stroke="none"
             fontFamily="Anton, sans-serif"
-            fontSize="66"
+            fontSize="46"
+            textLength="224"
+            lengthAdjust="spacingAndGlyphs"
           >
             RESTAURANT
           </text>
