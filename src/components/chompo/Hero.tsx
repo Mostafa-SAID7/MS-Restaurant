@@ -6,7 +6,7 @@ export function Hero() {
     <section className="relative overflow-hidden bg-signal pb-10">
       <Nav />
 
-      <div className="mx-auto max-w-[1200px] px-4 pt-10 text-center sm:px-6 sm:pt-16">
+      <div data-reveal className="mx-auto max-w-[1200px] px-4 pt-10 text-center sm:px-6 sm:pt-16">
         <p className="font-display text-2xl leading-none tracking-[0.02em] text-cream sm:text-4xl">
           THE
         </p>
@@ -18,7 +18,7 @@ export function Hero() {
         </p>
       </div>
 
-      <div className="relative mx-auto mt-6 max-w-[760px] px-4 sm:mt-10">
+      <div data-reveal data-reveal-delay="1" className="relative mx-auto mt-6 max-w-[760px] px-4 sm:mt-10">
         <Storefront className="w-full" />
         <div className="absolute -bottom-1 left-1/2 -translate-x-1/2">
           <button

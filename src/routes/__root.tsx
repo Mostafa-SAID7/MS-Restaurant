@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { ThemeProvider } from "@/lib/theme";
+import { installScrollReveal } from "@/lib/scroll-reveal";
 
 
 function NotFoundComponent() {
@@ -111,6 +112,9 @@ function RootShell({ children }: { children: ReactNode }) {
       <head>
         <HeadContent />
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <noscript>
+          <style>{`[data-reveal]{opacity:1!important;transform:none!important;transition:none!important}`}</style>
+        </noscript>
       </head>
       <body>
         {children}
@@ -122,6 +126,8 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+
+  useEffect(() => installScrollReveal(), []);
 
   return (
     <QueryClientProvider client={queryClient}>

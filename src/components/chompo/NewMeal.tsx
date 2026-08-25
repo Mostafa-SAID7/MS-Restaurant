@@ -72,7 +72,7 @@ function Blob({
 
 export function NewMeal() {
   return (
-    <section className="relative isolate flex h-[420px] items-center overflow-hidden bg-cream sm:h-[520px] lg:h-[580px]">
+    <section data-reveal className="relative isolate flex h-[420px] items-center overflow-hidden bg-cream sm:h-[520px] lg:h-[580px]">
       {/* Wavy double marquee, vertically centered */}
       <div className="absolute inset-x-0 top-1/2 z-10 -translate-y-1/2">
         <div className="-rotate-[4deg] skew-y-[2deg]">

@@ -31,7 +31,7 @@ function Photo({ src, alt }: { src: string; alt: string }) {
 export function FeaturedSection() {
   return (
     <section className="w-full bg-cream">
-      <div className="grid grid-cols-2 md:grid-cols-4">
+      <div data-reveal className="grid grid-cols-2 md:grid-cols-4">
         <Photo src={burgerBite} alt="Double cheeseburger with fresh lettuce and melted cheese" />
 
         <div className={`${TEXT_TILE} bg-signal`}>
@@ -64,7 +64,7 @@ export function FeaturedSection() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4">
+      <div data-reveal data-reveal-delay="1" className="grid grid-cols-2 md:grid-cols-4">
         <div className={`${TEXT_TILE} bg-ink`}>
           <p className={`${HEADLINE} mb-4`}>
             Bold Bites,

@@ -7,7 +7,7 @@ const CARD =
 export function CollageGrid() {
   return (
     <section className="bg-cream px-4 pb-16 sm:px-6">
-      <div className="mx-auto grid max-w-[1200px] grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+      <div data-reveal className="mx-auto grid max-w-[1200px] grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
         <img
           src={burgerBite}
           alt="Woman biting into a double cheeseburger"

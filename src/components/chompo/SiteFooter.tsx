@@ -39,7 +39,7 @@ function FooterNav({ title, items }: { title: string; items: string[] }) {
 export function SiteFooter() {
   return (
     <footer className="relative overflow-hidden bg-ink pt-16 text-cream">
-      <div className="mx-auto grid max-w-[1180px] gap-x-10 gap-y-12 px-6 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.2fr]">
+      <div data-reveal className="mx-auto grid max-w-[1180px] gap-x-10 gap-y-12 px-6 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.2fr]">
         {/* Brand + newsletter */}
         <div>
           <p className="font-display text-3xl leading-none tracking-[0.04em] text-cream">CHOMPO</p>
@@ -129,7 +129,7 @@ export function SiteFooter() {
       </div>
 
       {/* giant wordmark */}
-      <div className="relative mt-14 px-2">
+      <div data-reveal data-reveal-delay="1" className="relative mt-14 px-2">
         <p className="footer-wordmark text-center font-display text-[19vw] leading-[1.05] whitespace-nowrap text-cream">
           CHOMPO
         </p>

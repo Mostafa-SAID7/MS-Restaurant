@@ -3,7 +3,7 @@ import { Marquee } from "./Marquee";
 
 export function IconBand() {
   return (
-    <section className="relative bg-cream py-10">
+    <section data-reveal className="relative bg-cream py-10">
       {/* tilted red underlay */}
       <div className="absolute inset-x-0 top-1/2 h-16 -translate-y-1/2 -rotate-[1.6deg] bg-signal" />
 

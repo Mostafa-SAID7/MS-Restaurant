@@ -30,7 +30,7 @@ function ringText(radius: number, size: number) {
 export function TypeSpiral() {
   return (
     <section className="bg-cream px-4 pt-10 pb-20 sm:px-6">
-      <div className="relative mx-auto aspect-square w-full max-w-[640px]">
+      <div data-reveal className="relative mx-auto aspect-square w-full max-w-[640px]">
         <svg
           viewBox="0 0 600 600"
           className="absolute inset-0 h-full w-full select-none"

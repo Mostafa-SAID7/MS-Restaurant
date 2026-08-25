@@ -50,7 +50,7 @@ const REVIEWS: Review[] = [
 export function Reviews() {
   return (
     <section id="reviews" className="bg-cream px-6 pt-[90px] pb-[100px]">
-      <div className="mx-auto max-w-6xl">
+      <div data-reveal className="mx-auto max-w-6xl">
         <p className="text-center font-body text-[clamp(9px,1.1vw,11px)] tracking-[0.42em] text-ink/55">
           TESTIMONIALS
         </p>
