@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { flushSync } from "react-dom";
 import { Monitor, Moon, Sun } from "lucide-react";
 import { useTheme } from "@/lib/theme";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
@@ -34,15 +35,45 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
   const busyRef = useRef(false);
 
   const handleClick = () => {
-    // Prevent a second click from interrupting the color transition.
+    // Guard against a second click landing mid-View-Transition, which would
+    // queue a flip that visually cancels the first one.
     if (busyRef.current) return;
     busyRef.current = true;
     if (!prefersReducedMotion) setPulse((n) => n + 1);
 
-    toggle();
-    window.setTimeout(() => {
+    const doc = document as Document & {
+      startViewTransition?: (cb: () => void) => { finished: Promise<void> };
+    };
+
+    if (prefersReducedMotion || typeof doc.startViewTransition !== "function") {
+      toggle();
       busyRef.current = false;
-    }, duration);
+      return;
+    }
+
+    // Origin + radius so the new theme wipes out from the button itself.
+    const rect = btnRef.current?.getBoundingClientRect();
+    const x = rect ? rect.left + rect.width / 2 : window.innerWidth / 2;
+    const y = rect ? rect.top + rect.height / 2 : window.innerHeight / 2;
+    const radius = Math.hypot(
+      Math.max(x, window.innerWidth - x),
+      Math.max(y, window.innerHeight - y),
+    );
+
+    const root = document.documentElement;
+    root.style.setProperty("--theme-x", `${x}px`);
+    root.style.setProperty("--theme-y", `${y}px`);
+    root.style.setProperty("--theme-r", `${radius}px`);
+    root.dataset["themeReveal"] = "on";
+
+    const transition = doc.startViewTransition(() => {
+      flushSync(() => toggle());
+    });
+
+    transition.finished.finally(() => {
+      delete root.dataset["themeReveal"];
+      busyRef.current = false;
+    });
   };
 
   return (
