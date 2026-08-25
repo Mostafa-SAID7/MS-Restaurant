@@ -21,11 +21,7 @@ export function Hero() {
           id="burger-reveal"
           className="mx-auto max-w-[800px] origin-top animate-in fade-in zoom-in-95 slide-in-from-top-8 duration-500"
         >
-          <img
-            src={BURGER_IMAGE_URL}
-            alt="I want a burger"
-            className="block w-full"
-          />
+          <img src={BURGER_IMAGE_URL} alt="I want a burger" className="block w-full" />
         </div>
       ) : (
         <>
