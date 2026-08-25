@@ -2,6 +2,7 @@ import burgerBite from "@/assets/collage-sunglasses-burger.jpg";
 import chickenHand from "@/assets/collage-chicken-hand.jpg";
 import fries from "@/assets/featured-fries.jpg";
 import pizza from "@/assets/featured-pizza.jpg";
+import { useReveal } from "@/hooks/use-reveal";
 
 const TILE = "relative aspect-square overflow-hidden";
 const PHOTO_TILE = `${TILE} group`;
@@ -22,7 +23,7 @@ function Photo({ src, alt }: { src: string; alt: string }) {
         width={800}
         height={800}
         decoding="async"
-        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+        className="motion-image h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
       />
       <div className="absolute inset-0 bg-ink opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
     </div>
@@ -30,9 +31,13 @@ function Photo({ src, alt }: { src: string; alt: string }) {
 }
 
 export function FeaturedSection() {
+  const { ref, isVisible } = useReveal<HTMLElement>();
+
   return (
-    <section className="w-full bg-cream">
-      <div className="grid grid-cols-2 md:grid-cols-4">
+    <section ref={ref} className="w-full bg-cream">
+      <div
+        className={`motion-stagger grid grid-cols-2 md:grid-cols-4 ${isVisible ? "is-visible" : ""}`}
+      >
         <Photo src={burgerBite} alt="Full-stack engineer working on a web application" />
 
         <div className={`${TEXT_TILE} bg-signal`}>
@@ -65,7 +70,9 @@ export function FeaturedSection() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4">
+      <div
+        className={`motion-stagger grid grid-cols-2 md:grid-cols-4 ${isVisible ? "is-visible" : ""}`}
+      >
         <div className={`${TEXT_TILE} bg-ink`}>
           <p className={`${HEADLINE} mb-4`}>
             Thoughtful Code,

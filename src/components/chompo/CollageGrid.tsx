@@ -1,13 +1,18 @@
 import burgerBite from "@/assets/collage-burger-bite.jpg";
 import handsSandwich from "@/assets/collage-hands-sandwich.jpg";
+import { useReveal } from "@/hooks/use-reveal";
 
 const CARD =
   "h-52 w-full overflow-hidden rounded-[1.25rem] border-[3px] border-ink sm:h-64 lg:h-72";
 
 export function CollageGrid() {
+  const { ref, isVisible } = useReveal<HTMLElement>();
+
   return (
-    <section className="bg-cream px-4 pb-10 sm:px-6 sm:pb-12">
-      <div className="mx-auto grid max-w-[1200px] grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+    <section ref={ref} className="bg-cream px-4 pb-10 sm:px-6 sm:pb-12">
+      <div
+        className={`motion-stagger mx-auto grid max-w-[1200px] grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4 ${isVisible ? "is-visible" : ""}`}
+      >
         <img
           src={burgerBite}
           alt="Woman biting into a double cheeseburger"

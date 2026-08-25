@@ -1,6 +1,7 @@
 import chickenHand from "@/assets/collage-chicken-hand.jpg";
 import sunglassesBurger from "@/assets/collage-sunglasses-burger.jpg";
 import handsSandwich from "@/assets/collage-hands-sandwich.jpg";
+import { useReveal } from "@/hooks/use-reveal";
 import { Marquee } from "./Marquee";
 
 /**
@@ -72,8 +73,13 @@ function Blob({
 }
 
 export function NewMeal() {
+  const { ref, isVisible } = useReveal<HTMLElement>();
+
   return (
-    <section className="relative isolate flex h-[420px] items-center overflow-hidden bg-cream sm:h-[520px] lg:h-[580px]">
+    <section
+      ref={ref}
+      className={`motion-reveal relative isolate flex h-[420px] items-center overflow-hidden bg-cream sm:h-[520px] lg:h-[580px] ${isVisible ? "is-visible" : ""}`}
+    >
       {/* Wavy double marquee, vertically centered */}
       <div className="absolute inset-x-0 top-1/2 z-10 -translate-y-1/2">
         <div className="-rotate-[4deg] skew-y-[2deg]">
