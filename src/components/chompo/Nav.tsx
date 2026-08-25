@@ -5,7 +5,7 @@ export function Nav() {
     <header className="px-3 pt-3 sm:px-5 sm:pt-5">
       <nav className="mx-auto flex max-w-[1200px] items-center justify-between rounded-2xl bg-ink px-5 py-2.5 sm:px-7 sm:py-3.5">
         <a href="/" className="font-display text-2xl tracking-wide text-signal sm:text-3xl">
-          MOSTAFA SAMIR
+          M.SAID
         </a>
         <div className="flex items-center gap-2 sm:gap-3">
           <ThemeToggle />
