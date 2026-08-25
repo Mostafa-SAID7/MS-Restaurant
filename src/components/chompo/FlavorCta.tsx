@@ -51,18 +51,18 @@ export function FlavorCta() {
             {/* front face */}
             <div className="relative flex-1 bg-signal px-6 py-10 text-left sm:px-10 sm:py-14">
               <p className="font-display text-5xl leading-[0.9] text-cream sm:text-7xl lg:text-8xl">
-                KHIDA
-                <br />
-                LAGLEE
-                <br />
-                CALL DE
+LET&apos;S BUILD
+            <br />
+            SOMETHING
+            <br />
+            GREAT
               </p>
             </div>
 
             {/* white label panel */}
             <div className="relative m-6 w-[34%] max-w-[240px] rounded-sm bg-cream px-4 py-6 text-center shadow-[0_10px_0_var(--shadow-soft)] sm:m-8">
-              <p className="font-display text-4xl leading-none text-signal sm:text-5xl">25%</p>
-              <p className="font-display text-2xl leading-none text-ink sm:text-3xl">Discount</p>
+              <p className="font-display text-4xl leading-none text-signal sm:text-5xl">100%</p>
+              <p className="font-display text-2xl leading-none text-ink sm:text-3xl">Open to Work</p>
               <p className="mt-4 font-heavy text-[0.6rem] tracking-[0.08em] text-ink uppercase">
                 Download
                 <br />
@@ -79,7 +79,7 @@ export function FlavorCta() {
                     <path d="M3 2.5v19l11-9.5z" />
                   </svg>
                   <span className="font-heavy text-[0.5rem] tracking-[0.06em] uppercase">
-                    Get it on Google Play
+                    View on GitHub
                   </span>
                 </span>
                 <span className="flex items-center justify-center gap-2 rounded-sm bg-ink px-2 py-1.5 text-cream">
@@ -87,7 +87,7 @@ export function FlavorCta() {
                     <path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.5-.2-2.8.8-3.5.8s-1.9-.8-3.1-.8c-1.6 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7 2-1.1 2.8-2.2c.9-1.3 1.2-2.5 1.3-2.6-.1 0-2.4-.9-2.4-3.8ZM14 5.4c.6-.8 1.1-1.9 1-3-1 0-2.2.6-2.9 1.5-.6.7-1.2 1.9-1 3 1.1 0 2.3-.6 2.9-1.5Z" />
                   </svg>
                   <span className="font-heavy text-[0.5rem] tracking-[0.06em] uppercase">
-                    Download on the App Store
+                    Connect on LinkedIn
                   </span>
                 </span>
               </div>

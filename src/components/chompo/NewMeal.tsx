@@ -17,7 +17,7 @@ function Line({ durationSeconds }: { durationSeconds: number }) {
           className="pr-[0.18em] font-display text-[3.5rem] leading-[0.78] tracking-[-0.035em] whitespace-nowrap text-signal uppercase sm:text-[6rem] lg:text-[8.5rem]"
           style={{ transform: "scaleX(1.04)", transformOrigin: "left center" }}
         >
-          New Meal in Town&nbsp;
+          New Build in Production&nbsp;
         </span>
       ))}
     </Marquee>
