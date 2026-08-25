@@ -103,6 +103,16 @@
   --collage-green: oklch(0.35 0.07 158);
   --collage-blue: oklch(0.74 0.1 245);
 
+  /*
+   * Elevation — deep ink-tinted shadow tone (never flat pure black).
+   * Stays dark in both modes; opacity steps drive perceived depth.
+   */
+  --shadow-tone: oklch(0.12 0.02 30);
+  --shadow-faint: color-mix(in oklab, var(--shadow-tone) 12%, transparent);
+  --shadow-soft: color-mix(in oklab, var(--shadow-tone) 22%, transparent);
+  --shadow-medium: color-mix(in oklab, var(--shadow-tone) 34%, transparent);
+  --shadow-strong: color-mix(in oklab, var(--shadow-tone) 48%, transparent);
+
   --background: var(--cream);
   --foreground: var(--ink);
   --card: var(--cream);
@@ -152,6 +162,13 @@
   /* Collage accents lift slightly so they don't sink into the dark canvas. */
   --collage-green: oklch(0.5 0.09 158);
   --collage-blue: oklch(0.62 0.12 245);
+
+  /* Deeper, near-black shadow tone so elevation reads on the dark canvas. */
+  --shadow-tone: oklch(0.03 0.01 26);
+  --shadow-faint: color-mix(in oklab, var(--shadow-tone) 30%, transparent);
+  --shadow-soft: color-mix(in oklab, var(--shadow-tone) 42%, transparent);
+  --shadow-medium: color-mix(in oklab, var(--shadow-tone) 55%, transparent);
+  --shadow-strong: color-mix(in oklab, var(--shadow-tone) 68%, transparent);
 
   --background: var(--cream);
   --foreground: var(--ink);
