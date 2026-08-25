@@ -21,7 +21,9 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
   const next = isDark ? "light" : "dark";
 
   const iconStyle = (active: boolean, from: string) => ({
-    transform: active ? "rotate(0deg) scale(1) translateY(0)" : `${from} scale(0.35) translateY(6px)`,
+    transform: active
+      ? "rotate(0deg) scale(1) translateY(0)"
+      : `${from} scale(0.35) translateY(6px)`,
     opacity: active ? 1 : 0,
     filter: active ? "blur(0px)" : "blur(3px)",
     transition: prefersReducedMotion
@@ -53,7 +55,10 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
     const rect = btnRef.current?.getBoundingClientRect();
     const x = rect ? rect.left + rect.width / 2 : window.innerWidth / 2;
     const y = rect ? rect.top + rect.height / 2 : window.innerHeight / 2;
-    const radius = Math.hypot(Math.max(x, window.innerWidth - x), Math.max(y, window.innerHeight - y));
+    const radius = Math.hypot(
+      Math.max(x, window.innerWidth - x),
+      Math.max(y, window.innerHeight - y),
+    );
 
     const root = document.documentElement;
     root.style.setProperty("--theme-x", `${x}px`);
@@ -105,7 +110,6 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
           style={{ animation: "toggle-ripple 620ms cubic-bezier(0.22, 1, 0.36, 1) forwards" }}
         />
       ) : null}
-
 
       {/* Sun — explicit light */}
       <span

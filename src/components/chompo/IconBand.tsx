@@ -12,7 +12,9 @@ export function IconBand() {
         <Marquee durationSeconds={26}>
           {SKILLS.map((skill, index) => (
             <span key={`${skill}-${index}`} className="flex items-center gap-4 px-5">
-              <span className="font-display text-3xl text-signal sm:text-5xl" aria-hidden="true">✦</span>
+              <span className="font-display text-3xl text-signal sm:text-5xl" aria-hidden="true">
+                ✦
+              </span>
               <span className="font-display text-lg whitespace-nowrap text-cream sm:text-2xl">
                 {skill}
               </span>

@@ -9,7 +9,6 @@ const RINGS = [
   { radius: 85, size: 25, duration: 62 },
 ];
 
-
 const TAGS = [
   { label: ".NET 8", className: "top-[20%] right-[-2%] rotate-[-10deg]" },
   { label: "MICROSERVICES", className: "top-[54%] left-[-3%] rotate-[8deg]" },

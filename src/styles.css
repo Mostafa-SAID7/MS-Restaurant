@@ -361,7 +361,6 @@
     border-radius: 999px;
   }
 
-
   ::-webkit-scrollbar-thumb {
     border-radius: 999px;
     border: 3px solid transparent;
@@ -386,8 +385,8 @@
 /* ---------------- Utilities ---------------- */
 
 @utility bumps-up {
-  background: radial-gradient(circle 30px at 50% 100%, currentColor 99%, transparent 100%) 50% 100% /
-    56px 30px repeat-x;
+  background: radial-gradient(circle 30px at 50% 100%, currentColor 99%, transparent 100%) 50%
+    100% / 56px 30px repeat-x;
 }
 
 @utility footer-wordmark {
@@ -500,6 +499,12 @@ html[data-theme-transition="on"] *::after {
 
 html[data-theme-reveal="on"]::view-transition-new(root) {
   animation: theme-reveal 720ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Keep below-the-fold sections out of the initial rendering work. The intrinsic size prevents layout shifts while they are deferred. */
+main > *:not(:first-child) {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 520px;
 }
 
 /* ---------------- Reduced motion ---------------- */

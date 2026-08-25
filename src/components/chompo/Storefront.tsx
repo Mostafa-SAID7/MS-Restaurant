@@ -56,8 +56,14 @@ export function Storefront({ className = "" }: { className?: string }) {
         <path d="M96 368h528" strokeWidth="3.4" />
 
         {/* bushes */}
-        <path d="M120 368c-14 0-22-10-16-18s16-6 18-14 16-10 22 0 16 4 16 14-10 18-24 18z" fill="var(--cream)" />
-        <path d="M600 368c-14 0-24-8-18-18s14-6 18-14 16-8 22 2 14 6 12 16-12 14-24 14z" fill="var(--cream)" />
+        <path
+          d="M120 368c-14 0-22-10-16-18s16-6 18-14 16-10 22 0 16 4 16 14-10 18-24 18z"
+          fill="var(--cream)"
+        />
+        <path
+          d="M600 368c-14 0-24-8-18-18s14-6 18-14 16-8 22 2 14 6 12 16-12 14-24 14z"
+          fill="var(--cream)"
+        />
       </g>
     </svg>
   );
