@@ -42,7 +42,7 @@ function useReveal<T extends HTMLElement>() {
   return { ref, shown };
 }
 
-const KHIDA_LINES = ["Khida", "Laglee", "Call De"];
+const KHIDA_LINES = ["Build", "Ship", "Scale"];
 
 export function KhidaSection() {
   const { ref, shown } = useReveal<HTMLDivElement>();
@@ -60,12 +60,12 @@ export function KhidaSection() {
       {/* Top label area */}
       <div className="relative pt-[72px] pb-6 text-center">
         <p className="font-oswald text-[clamp(9px,1.1vw,11px)] font-light tracking-[0.42em] text-ink/55 uppercase">
-          JOIN THE FLAVOR REVOLUTION!
+          LET&apos;S BUILD SOMETHING GREAT
         </p>
         <h2 className="mt-2 font-display text-[clamp(24px,4.2vw,56px)] leading-[1.05] tracking-[0.04em] text-ink">
-          FUEL UP WITH
+          FULL STACK
           <br />
-          CHOMPO!
+          ENGINEERING!
         </h2>
       </div>
 
@@ -100,37 +100,37 @@ export function KhidaSection() {
             className="khida-straw khida-straw-2 absolute top-[-46px] right-[clamp(122px,21vw,204px)] hidden h-[140px] w-[10px] rounded-[6px] border-[2.5px] border-cream sm:block"
           />
 
-          {/* Discount card */}
+          {/* Open to Work card */}
           <div className="khida-card relative mx-auto mt-9 w-full max-w-[280px] bg-cream px-5 py-[18px] shadow-[6px_6px_0_var(--ink)] transition-transform duration-300 hover:-translate-y-1 hover:rotate-[-1.5deg] sm:absolute sm:top-[clamp(20px,3.2vw,40px)] sm:right-[clamp(20px,3.5vw,48px)] sm:mx-0 sm:mt-0 sm:w-[clamp(132px,17.5vw,178px)]">
             <div className="mb-2.5 inline-block bg-signal px-2.5 py-1">
               <p className="font-display text-[clamp(9px,1.1vw,11px)] tracking-[0.14em] text-cream">
-                LIMITED OFFER
+                NOW AVAILABLE
               </p>
             </div>
 
             <p className="mb-1 font-display text-[clamp(22px,3.4vw,32px)] leading-none text-signal">
-              25%
+              100%
               <br />
-              Discount
+              Open to Work
             </p>
             <p className="mb-3 font-oswald text-[9px] leading-[1.5] font-light tracking-[0.06em] text-ink">
-              Download The App Now
+              Available for freelance and full-time opportunities
             </p>
 
-            {/* ORDER NOW button */}
+            {/* Portfolio action */}
             <button
               type="button"
               className="mb-2.5 w-full cursor-pointer bg-ink px-3 py-2.5 text-center transition-colors hover:bg-signal-dark"
             >
               <p className="mb-0.5 font-display text-[clamp(13px,2vw,18px)] leading-none tracking-[0.1em] text-cream">
-                ORDER
+VIEW
                 <br />
-                NOW
+WORK
               </p>
               <span className="animate-nudge-left inline-block text-[13px] text-signal">←</span>
             </button>
 
-            {/* App store buttons */}
+            {/* Professional links */}
             <div className="flex flex-col gap-2">
               <span className="flex cursor-pointer items-center gap-2 rounded bg-ink px-2 py-1.5 transition-transform hover:translate-x-0.5">
                 <svg width="10" height="12" viewBox="0 0 10 12" fill="none" aria-hidden="true">
@@ -139,7 +139,7 @@ export function KhidaSection() {
                 <span className="font-oswald text-[7px] leading-[1.4] font-light tracking-[0.04em] text-cream">
                   GET IT ON
                   <br />
-                  <strong className="font-semibold">Google Play</strong>
+                  <strong className="font-semibold">GitHub</strong>
                 </span>
               </span>
               <span className="flex cursor-pointer items-center gap-2 rounded bg-ink px-2 py-1.5 transition-transform hover:translate-x-0.5">
@@ -147,21 +147,21 @@ export function KhidaSection() {
                   <path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.5-.2-2.8.8-3.5.8s-1.9-.8-3.1-.8c-1.6 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7 2-1.1 2.8-2.2c.9-1.3 1.2-2.5 1.3-2.6-.1 0-2.4-.9-2.4-3.8ZM14 5.4c.6-.8 1.1-1.9 1-3-1 0-2.2.6-2.9 1.5-.6.7-1.2 1.9-1 3 1.1 0 2.3-.6 2.9-1.5Z" />
                 </svg>
                 <span className="font-oswald text-[7px] leading-[1.4] font-light tracking-[0.04em] text-cream">
-                  Download on the
+                  Connect via
                   <br />
-                  <strong className="font-semibold">App Store</strong>
+                  <strong className="font-semibold">LinkedIn</strong>
                 </span>
               </span>
             </div>
           </div>
 
-          {/* CHOMPO CALL button */}
+          {/* LET&apos;S CONNECT button */}
           <div className="mt-8">
             <button
               type="button"
               className="khida-dashed inline-flex items-center gap-2 rounded-[30px] border-2 border-dashed border-cream/55 bg-transparent px-7 py-[11px] font-display text-[clamp(10px,1.3vw,13px)] tracking-[0.22em] text-cream transition-colors hover:bg-cream/10"
             >
-              <span className="animate-[spin_5s_linear_infinite] inline-block">★</span> CHOMPO CALL
+              <span className="animate-[spin_5s_linear_infinite] inline-block">★</span> LET&apos;S CONNECT
             </button>
           </div>
         </div>

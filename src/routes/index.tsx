@@ -10,9 +10,9 @@ import { Reviews } from "@/components/chompo/Reviews";
 import { KhidaSection } from "@/components/chompo/KhidaSection";
 import { SiteFooter } from "@/components/chompo/SiteFooter";
 
-const TITLE = "CHOMPO | Fast Food & Delivery That Hits Different";
+const TITLE = "Mostafa Samir | Senior Full Stack Engineer";
 const DESCRIPTION =
-  "Bold burgers, crispy fries and fried chicken delivered fast. Order from CHOMPO and turn up the flavor.";
+  "Senior Full Stack Engineer specializing in .NET 8, microservices, modern web architectures, and scalable marketplace platforms."
 
 export const Route = createFileRoute("/")({
   head: () => ({

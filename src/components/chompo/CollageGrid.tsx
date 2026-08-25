@@ -20,9 +20,9 @@ export function CollageGrid() {
         <div className={`${CARD} flex items-center justify-center bg-ink px-4 text-center`}>
           <div>
             <p className="font-slab text-2xl leading-tight font-extrabold text-signal sm:text-3xl">
-              Turn Up The Flavor, Turn Up The Fun.
+              Building scalable products with clean architecture and modern web technologies.
             </p>
-            <p className="mt-4 font-heavy text-xs tracking-[0.2em] text-signal uppercase">Chompo</p>
+            <p className="mt-4 font-heavy text-xs tracking-[0.2em] text-signal uppercase">4+ YEARS EXPERIENCE</p>
           </div>
         </div>
 
@@ -38,10 +38,10 @@ export function CollageGrid() {
         <div className={`${CARD} flex items-center justify-center bg-signal px-4 text-center`}>
           <div>
             <p className="font-heavy text-[0.65rem] tracking-[0.24em] text-cream uppercase">
-              Chompo
+              4+ YEARS EXPERIENCE
             </p>
             <p className="mt-3 font-slab text-2xl leading-tight font-extrabold text-cream sm:text-3xl">
-              Snack Like You Mean It
+              Microservices, APIs, and polished frontends.
             </p>
           </div>
         </div>

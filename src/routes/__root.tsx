@@ -79,7 +79,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { property: "og:site_name", content: "CHOMPO" },
+      { property: "og:site_name", content: "Mostafa Samir Portfolio" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -103,7 +103,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   errorComponent: ErrorComponent,
 });
 
-const themeInitScript = `(function(){try{var s=localStorage.getItem("chompo-theme");var sys=window.matchMedia("(prefers-color-scheme: dark)").matches;var d=(s==="dark")||(s!=="light"&&sys);var r=document.documentElement;r.classList.toggle("dark",d);r.style.colorScheme=d?"dark":"light";}catch(e){}})();`;
+const themeInitScript = `(function(){try{var s=localStorage.getItem("portfolio-theme");var sys=window.matchMedia("(prefers-color-scheme: dark)").matches;var d=(s==="dark")||(s!=="light"&&sys);var r=document.documentElement;r.classList.toggle("dark",d);r.style.colorScheme=d?"dark":"light";}catch(e){}})();`;
 
 function RootShell({ children }: { children: ReactNode }) {
   return (

@@ -23,7 +23,7 @@ interface ThemeContextValue {
 
 const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 
-const STORAGE_KEY = "chompo-theme";
+const STORAGE_KEY = "portfolio-theme";
 const MEDIA = "(prefers-color-scheme: dark)";
 
 function systemTheme(): ResolvedTheme {

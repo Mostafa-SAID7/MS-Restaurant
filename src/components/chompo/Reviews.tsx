@@ -10,36 +10,36 @@ interface Review {
 
 const REVIEWS: Review[] = [
   {
-    text: "I LOVE HOW CHOMPO KEEPS THINGS SIMPLE BUT SO FLAVORFUL. THE FRIES ARE CRISPY AND THE BURGERS — ABSOLUTE PERFECTION!",
+    text: "MOSTAFA BRINGS CLARITY TO COMPLEX SYSTEMS. HIS CODE IS THOUGHTFUL, FAST, AND BUILT TO SCALE.",
     author: "SARAH CHEN",
-    role: "🍔 BURGER LOVER",
+    role: "ENGINEERING LEAD",
     tone: "signal",
     rotation: -9,
     offsetX: -180,
     offsetY: 10,
   },
   {
-    text: "THIS IS NOT JUST FOOD. IT'S AN EXPERIENCE. EVERY BITE IS CRISPY, JUICY, AND FULL OF FLAVOR. CHOMPO IS MY GO-TO!",
+    text: "A RARE ENGINEER WHO CAN MOVE FROM PRODUCT THINKING TO PRODUCTION-READY IMPLEMENTATION WITHOUT LOSING THE DETAILS.",
     author: "JAMES TUCKER",
-    role: "FOOD CRITIC",
+    role: "PRODUCT PARTNER",
     tone: "ink",
     rotation: -3,
     offsetX: -55,
     offsetY: -8,
   },
   {
-    text: "ORDERING FROM CHOMPO IS ALWAYS EASY AND THE DELIVERY IS FAST! THE TASTE IS UNMATCHED AND THE VIBE FEELS REALLY GENUINE.",
-    author: "BURGER PRINCESS",
-    role: "🍟 SNACK QUEEN",
+    text: "FROM FIRST ARCHITECTURE DIAGRAM TO DEPLOYMENT, MOSTAFA MAKES COLLABORATION FEEL SIMPLE AND DELIVERY FEEL RELIABLE.",
+    author: "AMINA HASSAN",
+    role: "TECHNICAL CLIENT",
     tone: "signal",
     rotation: 4,
     offsetX: 65,
     offsetY: 6,
   },
   {
-    text: "CHOMPO BURGERS HIT THE SPOT EVERY TIME. BOLD FLAVORS, FRESH INGREDIENTS, AND FRIENDLY SERVICE. MY GO-TO FOR A QUICK MEAL!",
+    text: "STRONG OWNERSHIP, CLEAN COMMUNICATION, AND THE ENGINEERING JUDGMENT TO BUILD SOFTWARE PEOPLE CAN DEPEND ON.",
     author: "DANIEL TUCKER",
-    role: "🍟 REGULAR CUSTOMER",
+    role: "TEAMMATE",
     tone: "ink",
     rotation: 10,
     offsetX: 185,
@@ -58,7 +58,7 @@ export function Reviews() {
         <h2 className="mt-2.5 mb-[90px] text-center font-display text-[clamp(28px,5.5vw,70px)] leading-[1.02] tracking-[0.03em] text-ink">
           REAL TALK FROM
           <br />
-          REAL FOODIES
+          REAL TEAMS
         </h2>
 
         {/* fanned stack — large screens */}
@@ -98,7 +98,7 @@ export function Reviews() {
             type="button"
             className="border-[1.5px] border-ink px-8 py-2.5 font-display text-[clamp(9px,1.1vw,12px)] tracking-[0.28em] text-ink transition-colors duration-200 hover:bg-ink hover:text-cream"
           >
-            READ MORE REVIEWS
+            READ MORE ABOUT ME
           </button>
         </div>
       </div>

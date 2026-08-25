@@ -1,5 +1,6 @@
-import { FOOD_ICONS } from "./FoodIcons";
 import { Marquee } from "./Marquee";
+
+const SKILLS = [".NET 8", "React", "TypeScript", "Microservices", "PostgreSQL", "Azure"];
 
 export function IconBand() {
   return (
@@ -9,11 +10,11 @@ export function IconBand() {
 
       <div className="relative rotate-[1deg] border-y-[3px] border-ink bg-ink py-2">
         <Marquee durationSeconds={26}>
-          {FOOD_ICONS.map(({ label, Icon }, index) => (
-            <span key={`${label}-${index}`} className="flex items-center gap-4 px-5">
-              <Icon className="w-9 text-signal sm:w-11" />
+          {SKILLS.map((skill, index) => (
+            <span key={`${skill}-${index}`} className="flex items-center gap-4 px-5">
+              <span className="font-display text-3xl text-signal sm:text-5xl" aria-hidden="true">✦</span>
               <span className="font-display text-lg whitespace-nowrap text-cream sm:text-2xl">
-                {label.toUpperCase()}
+                {skill}
               </span>
             </span>
           ))}
