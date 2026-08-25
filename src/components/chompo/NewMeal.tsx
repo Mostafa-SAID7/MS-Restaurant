@@ -54,7 +54,7 @@ function Blob({
         aria-hidden="true"
       />
       <div
-        className="relative h-full w-full overflow-hidden ring-[6px] ring-cream drop-shadow-[0_22px_38px_rgba(0,0,0,0.18)]"
+        className="relative h-full w-full overflow-hidden ring-[6px] ring-cream drop-shadow-[0_22px_38px_var(--shadow-soft)]"
         style={{ borderRadius: blobRadius }}
       >
         <img
