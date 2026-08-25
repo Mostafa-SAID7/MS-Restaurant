@@ -100,7 +100,7 @@ export function NewMeal() {
           className="top-[18%] left-1/2 h-48 w-48 -translate-x-[42%] sm:h-64 sm:w-64 lg:h-80 lg:w-80"
           blobRadius="48% 52% 40% 60% / 55% 45% 58% 45%"
           backRadius="58% 42% 52% 48% / 45% 60% 40% 55%"
-          backClassName="bg-[#123f2b]"
+          backClassName="bg-collage-green"
           rotate="4deg"
         />
         <Blob
@@ -109,7 +109,7 @@ export function NewMeal() {
           className="top-[56%] left-1/2 h-36 w-36 -translate-x-[-10%] sm:h-52 sm:w-52 lg:h-60 lg:w-60"
           blobRadius="55% 45% 62% 38% / 42% 58% 42% 58%"
           backRadius="45% 55% 38% 62% / 60% 42% 58% 40%"
-          backClassName="bg-[#7fb6e8]"
+          backClassName="bg-collage-blue"
           rotate="-8deg"
         />
       </div>
