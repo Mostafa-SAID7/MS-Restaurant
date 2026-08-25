@@ -78,7 +78,7 @@ export function KhidaSection() {
           }`}
         >
           {/* Big stylized text */}
-          <div className="max-w-[60%] font-display text-[clamp(44px,9.5vw,128px)] leading-[0.88] tracking-[-0.01em] text-cream">
+          <div className="max-w-full font-display text-[clamp(44px,9.5vw,128px)] leading-[0.88] tracking-[-0.01em] text-cream sm:max-w-[60%]">
             {KHIDA_LINES.map((line, i) => (
               <span
                 key={line}
@@ -93,15 +93,15 @@ export function KhidaSection() {
           {/* Straw decorations */}
           <div
             aria-hidden="true"
-            className="khida-straw absolute top-[-60px] right-[clamp(140px,23vw,225px)] h-[160px] w-[10px] rounded-[6px] bg-cream"
+            className="khida-straw absolute top-[-60px] right-[clamp(140px,23vw,225px)] hidden h-[160px] w-[10px] rounded-[6px] bg-cream sm:block"
           />
           <div
             aria-hidden="true"
-            className="khida-straw khida-straw-2 absolute top-[-46px] right-[clamp(122px,21vw,204px)] h-[140px] w-[10px] rounded-[6px] border-[2.5px] border-cream"
+            className="khida-straw khida-straw-2 absolute top-[-46px] right-[clamp(122px,21vw,204px)] hidden h-[140px] w-[10px] rounded-[6px] border-[2.5px] border-cream sm:block"
           />
 
           {/* Discount card */}
-          <div className="khida-card absolute top-[clamp(20px,3.2vw,40px)] right-[clamp(20px,3.5vw,48px)] w-[clamp(132px,17.5vw,178px)] bg-cream px-5 py-[18px] shadow-[6px_6px_0_var(--ink)] transition-transform duration-300 hover:-translate-y-1 hover:rotate-[-1.5deg]">
+          <div className="khida-card relative mx-auto mt-9 w-full max-w-[280px] bg-cream px-5 py-[18px] shadow-[6px_6px_0_var(--ink)] transition-transform duration-300 hover:-translate-y-1 hover:rotate-[-1.5deg] sm:absolute sm:top-[clamp(20px,3.2vw,40px)] sm:right-[clamp(20px,3.5vw,48px)] sm:mx-0 sm:mt-0 sm:w-[clamp(132px,17.5vw,178px)]">
             <div className="mb-2.5 inline-block bg-signal px-2.5 py-1">
               <p className="font-display text-[clamp(9px,1.1vw,11px)] tracking-[0.14em] text-cream">
                 LIMITED OFFER
