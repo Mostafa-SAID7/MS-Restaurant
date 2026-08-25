@@ -26,14 +26,8 @@
   --color-ink: var(--ink);
   --color-signal: var(--signal);
   --color-signal-dark: var(--signal-dark);
-  --color-chompo-red: var(--chompo-red);
-  --color-chompo-red-light: var(--chompo-red-light);
-  --color-chompo-black: var(--chompo-black);
-  --color-chompo-cream: var(--chompo-cream);
-  --color-chompo-cream-dark: var(--chompo-cream-dark);
-  --color-chompo-brown: var(--chompo-brown);
-  --color-chompo-brown-light: var(--chompo-brown-light);
-  --color-chompo-brown-mid: var(--chompo-brown-mid);
+  --color-collage-green: var(--collage-green);
+  --color-collage-blue: var(--collage-blue);
 
   /* Semantic palette */
   --color-background: var(--background);
@@ -43,12 +37,8 @@
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
-  --color-primary-light: var(--primary-light);
-  --color-primary-dark: var(--primary-dark);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
-  --color-secondary-light: var(--secondary-light);
-  --color-secondary-dark: var(--secondary-dark);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
@@ -98,20 +88,20 @@
 :root {
   --radius: 0.625rem;
 
-  /* Brand */
-  --chompo-red: oklch(0.465 0.189 28.9);
-  --chompo-red-light: oklch(0.578 0.18 26.2);
-  --chompo-black: oklch(0.159 0 90);
-  --chompo-cream: oklch(0.96 0.048 94.3);
-  --chompo-cream-dark: oklch(0.934 0.066 97.1);
-  --chompo-brown: oklch(0.427 0.025 29.2);
-  --chompo-brown-light: oklch(0.755 0.025 59.3);
-  --chompo-brown-mid: oklch(0.653 0.048 42.9);
+  /*
+   * Brand — 60 / 30 / 10 in LIGHT mode:
+   *   60% weight (near-white canvas) = --cream
+   *   30% red    (brand signal)      = --signal
+   *   10% black  (ink / text)        = --ink
+   */
+  --cream: oklch(0.981 0.006 70);
+  --ink: oklch(0.165 0.012 40);
+  --signal: oklch(0.556 0.224 27.2);
+  --signal-dark: oklch(0.462 0.19 27.2);
 
-  --cream: oklch(0.968 0.033 96.5);
-  --ink: oklch(0.198 0 0);
-  --signal: oklch(0.552 0.222 27.2);
-  --signal-dark: oklch(0.463 0.191 27.2);
+  /* Collage accent blobs (NewMeal) */
+  --collage-green: oklch(0.35 0.07 158);
+  --collage-blue: oklch(0.74 0.1 245);
 
   --background: var(--cream);
   --foreground: var(--ink);
@@ -120,22 +110,18 @@
   --popover: var(--cream);
   --popover-foreground: var(--ink);
   --primary: var(--signal);
-  --primary-light: oklch(0.711 0.156 251);
-  --primary-dark: var(--signal-dark);
   --primary-foreground: var(--cream);
   --secondary: var(--ink);
-  --secondary-light: oklch(0.982 0.002 247.8);
-  --secondary-dark: oklch(0.911 0.007 247.9);
   --secondary-foreground: var(--cream);
-  --muted: oklch(0.93 0.03 96.5);
-  --muted-foreground: oklch(0.44 0.02 60);
+  --muted: oklch(0.955 0.012 45);
+  --muted-foreground: oklch(0.46 0.03 35);
   --accent: var(--signal);
   --accent-foreground: var(--cream);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --border: oklch(0.9 0.012 40);
+  --input: oklch(0.9 0.012 40);
+  --ring: var(--signal);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -152,43 +138,39 @@
 }
 
 .dark {
-  /* Brand tokens flip so every cream/ink surface in the app inverts too. */
-  --chompo-red: oklch(0.6 0.203 28.9);
-  --chompo-red-light: oklch(0.68 0.17 26.2);
-  --chompo-black: oklch(0.13 0 90);
-  --chompo-cream: oklch(0.945 0.04 94.3);
-  --chompo-cream-dark: oklch(0.9 0.055 97.1);
-  --chompo-brown: oklch(0.72 0.03 29.2);
-  --chompo-brown-light: oklch(0.5 0.02 59.3);
-  --chompo-brown-mid: oklch(0.58 0.045 42.9);
-
-  --cream: oklch(0.19 0.014 70);
-  --ink: oklch(0.955 0.021 96.5);
-  --signal: oklch(0.63 0.213 27.2);
+  /*
+   * Brand — 60 / 30 / 10 in DARK mode:
+   *   60% dark red (deep maroon canvas) = --cream  (background token)
+   *   30% black    (card / muted shells) = --card / --muted below
+   *   10% weight   (near-white text)     = --ink
+   */
+  --cream: oklch(0.235 0.072 26);
+  --ink: oklch(0.965 0.008 70);
+  --signal: oklch(0.64 0.216 28);
   --signal-dark: oklch(0.52 0.198 27.2);
+
+  /* Collage accents lift slightly so they don't sink into the dark canvas. */
+  --collage-green: oklch(0.5 0.09 158);
+  --collage-blue: oklch(0.62 0.12 245);
 
   --background: var(--cream);
   --foreground: var(--ink);
-  --card: oklch(0.24 0.016 70);
+  --card: oklch(0.16 0.028 26);
   --card-foreground: var(--ink);
-  --popover: oklch(0.24 0.016 70);
+  --popover: oklch(0.16 0.028 26);
   --popover-foreground: var(--ink);
   --primary: var(--signal);
-  --primary-light: oklch(0.74 0.14 251);
-  --primary-dark: var(--signal-dark);
   --primary-foreground: var(--ink);
   --secondary: var(--ink);
-  --secondary-light: oklch(0.3 0.014 70);
-  --secondary-dark: oklch(0.26 0.014 70);
   --secondary-foreground: var(--cream);
-  --muted: oklch(0.26 0.014 70);
-  --muted-foreground: oklch(0.76 0.02 80);
+  --muted: oklch(0.19 0.03 26);
+  --muted-foreground: oklch(0.8 0.018 70);
   --accent: var(--signal);
   --accent-foreground: var(--ink);
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(1 0 0 / 14%);
-  --input: oklch(1 0 0 / 15%);
+  --border: oklch(1 0 0 / 13%);
+  --input: oklch(1 0 0 / 14%);
   --ring: var(--signal);
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
