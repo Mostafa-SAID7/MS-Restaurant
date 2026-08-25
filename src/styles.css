@@ -28,6 +28,7 @@
   --color-signal-dark: var(--signal-dark);
   --color-collage-green: var(--collage-green);
   --color-collage-blue: var(--collage-blue);
+  --color-overlay: var(--overlay);
 
   /* Semantic palette */
   --color-background: var(--background);
@@ -113,6 +114,9 @@
   --shadow-medium: color-mix(in oklab, var(--shadow-tone) 34%, transparent);
   --shadow-strong: color-mix(in oklab, var(--shadow-tone) 48%, transparent);
 
+  /* Modal scrim — deep ink-tinted, never flat black. */
+  --overlay: color-mix(in oklab, var(--shadow-tone) 82%, transparent);
+
   --background: var(--cream);
   --foreground: var(--ink);
   --card: var(--cream);
@@ -169,6 +173,9 @@
   --shadow-soft: color-mix(in oklab, var(--shadow-tone) 42%, transparent);
   --shadow-medium: color-mix(in oklab, var(--shadow-tone) 55%, transparent);
   --shadow-strong: color-mix(in oklab, var(--shadow-tone) 68%, transparent);
+
+  /* Even deeper scrim on the dark canvas. */
+  --overlay: color-mix(in oklab, var(--shadow-tone) 90%, transparent);
 
   --background: var(--cream);
   --foreground: var(--ink);
