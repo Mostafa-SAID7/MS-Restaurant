@@ -95,7 +95,7 @@
    *   10% black  (ink / text)        = --ink
    */
   --cream: oklch(0.981 0.006 70);
-  --ink: oklch(0.165 0.012 40);
+  --ink: oklch(0.14 0.018 34);
   --signal: oklch(0.556 0.224 27.2);
   --signal-dark: oklch(0.462 0.19 27.2);
 
