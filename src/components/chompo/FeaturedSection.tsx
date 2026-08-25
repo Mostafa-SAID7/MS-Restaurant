@@ -32,7 +32,7 @@ export function FeaturedSection() {
   return (
     <section className="w-full bg-cream">
       <div className="grid grid-cols-2 md:grid-cols-4">
-        <Photo src={burgerBite} alt="Double cheeseburger with fresh lettuce and melted cheese" />
+        <Photo src={burgerBite} alt="Full-stack engineer working on a web application" />
 
         <div className={`${TEXT_TILE} bg-signal`}>
           <p className={`${LABEL} mb-2 text-cream/75`}>Professional Summary</p>
@@ -46,7 +46,7 @@ export function FeaturedSection() {
           <span className={PILL}>FULL STACK</span>
         </div>
 
-        <Photo src={chickenHand} alt="Crispy golden fried chicken held in one hand" />
+        <Photo src={chickenHand} alt="Developer reviewing a software project" />
 
         <div className={`${TEXT_TILE} bg-signal`}>
           <p className={`${LABEL} mb-2 text-cream/75`}>Engineering Focus</p>
@@ -67,19 +67,19 @@ export function FeaturedSection() {
       <div className="grid grid-cols-2 md:grid-cols-4">
         <div className={`${TEXT_TILE} bg-ink`}>
           <p className={`${HEADLINE} mb-4`}>
-            Bold Bites,
+            Thoughtful Code,
             <br />
-            Big Smiles.
+            Real Impact.
           </p>
           <span aria-hidden="true" className="h-0.5 w-9 bg-signal" />
         </div>
 
-        <Photo src={fries} alt="Golden crispy french fries in a red carton" />
-        <Photo src={pizza} alt="Fresh hot pizza with melted cheese and pepperoni" />
+        <Photo src={fries} alt="Clean dashboard interface for a production application" />
+        <Photo src={pizza} alt="Scalable backend architecture and service design" />
 
         <div className={`${TEXT_TILE} bg-signal`}>
           <p className={`${HEADLINE} mb-4`}>
-            Every Bite
+            Every Project
             <br />
             Tells A Story
           </p>

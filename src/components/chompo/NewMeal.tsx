@@ -25,9 +25,9 @@ function Line({ durationSeconds }: { durationSeconds: number }) {
 }
 
 /**
- * A hand-torn looking organic blob that holds a food photo, with a second
- * offset blob of flat colour peeking out behind it — the paper-collage trick
- * that keeps the cutouts from reading as floating rectangles.
+ * A hand-torn looking organic blob that holds a project photo, with a second
+ * offset blob of flat colour peeking out behind it — a paper-collage treatment
+ * that keeps the work samples visually connected to the page.
  */
 function Blob({
   src,
@@ -87,7 +87,7 @@ export function NewMeal() {
       <div className="pointer-events-none absolute inset-0 z-20 mx-auto max-w-[1100px]">
         <Blob
           src={handsSandwich}
-          alt="Crispy fried chicken sandwich being bitten"
+          alt="Full-stack project interface preview"
           className="top-[-6%] left-1/2 h-40 w-40 -translate-x-[125%] sm:h-56 sm:w-56 lg:h-64 lg:w-64"
           blobRadius="62% 38% 55% 45% / 48% 58% 42% 52%"
           backRadius="55% 45% 48% 52% / 58% 44% 56% 42%"
@@ -96,7 +96,7 @@ export function NewMeal() {
         />
         <Blob
           src={sunglassesBurger}
-          alt="Person in sunglasses biting a burger"
+          alt="Modern web application project preview"
           className="top-[18%] left-1/2 h-48 w-48 -translate-x-[42%] sm:h-64 sm:w-64 lg:h-80 lg:w-80"
           blobRadius="48% 52% 40% 60% / 55% 45% 58% 45%"
           backRadius="58% 42% 52% 48% / 45% 60% 40% 55%"
@@ -105,7 +105,7 @@ export function NewMeal() {
         />
         <Blob
           src={chickenHand}
-          alt="Saucy spicy fried chicken drumstick"
+          alt="Scalable software architecture project preview"
           className="top-[56%] left-1/2 h-36 w-36 -translate-x-[-10%] sm:h-52 sm:w-52 lg:h-60 lg:w-60"
           blobRadius="55% 45% 62% 38% / 42% 58% 42% 58%"
           backRadius="45% 55% 38% 62% / 60% 42% 58% 40%"

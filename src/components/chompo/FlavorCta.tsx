@@ -64,14 +64,14 @@ LET&apos;S BUILD
               <p className="font-display text-4xl leading-none text-signal sm:text-5xl">100%</p>
               <p className="font-display text-2xl leading-none text-ink sm:text-3xl">Open to Work</p>
               <p className="mt-4 font-heavy text-[0.6rem] tracking-[0.08em] text-ink uppercase">
-                Download
+                Explore
                 <br />
-                The App And
+                My Work And
               </p>
               <p className="mt-2 font-display text-3xl leading-[0.85] text-signal sm:text-4xl">
-                ORDER
+                CONNECT
                 <br />
-                NOW
+                TODAY
               </p>
               <div className="mt-4 space-y-2">
                 <span className="flex items-center justify-center gap-2 rounded-sm bg-ink px-2 py-1.5 text-cream">

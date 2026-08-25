@@ -104,12 +104,12 @@ export function KhidaSection() {
           <div className="khida-card relative mx-auto mt-9 w-full max-w-[280px] bg-cream px-5 py-[18px] shadow-[6px_6px_0_var(--ink)] transition-transform duration-300 hover:-translate-y-1 hover:rotate-[-1.5deg] sm:absolute sm:top-[clamp(20px,3.2vw,40px)] sm:right-[clamp(20px,3.5vw,48px)] sm:mx-0 sm:mt-0 sm:w-[clamp(132px,17.5vw,178px)]">
             <div className="mb-2.5 inline-block bg-signal px-2.5 py-1">
               <p className="font-display text-[clamp(9px,1.1vw,11px)] tracking-[0.14em] text-cream">
-                LIMITED OFFER
+                NOW AVAILABLE
               </p>
             </div>
 
             <p className="mb-1 font-display text-[clamp(22px,3.4vw,32px)] leading-none text-signal">
-              25%
+              100%
               <br />
               Open to Work
             </p>
@@ -147,7 +147,7 @@ WORK
                   <path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.5-.2-2.8.8-3.5.8s-1.9-.8-3.1-.8c-1.6 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7 2-1.1 2.8-2.2c.9-1.3 1.2-2.5 1.3-2.6-.1 0-2.4-.9-2.4-3.8ZM14 5.4c.6-.8 1.1-1.9 1-3-1 0-2.2.6-2.9 1.5-.6.7-1.2 1.9-1 3 1.1 0 2.3-.6 2.9-1.5Z" />
                 </svg>
                 <span className="font-oswald text-[7px] leading-[1.4] font-light tracking-[0.04em] text-cream">
-                  Download on the
+                  Connect via
                   <br />
                   <strong className="font-semibold">LinkedIn</strong>
                 </span>
