@@ -50,7 +50,10 @@ export function KhidaSection() {
   return (
     <section className="relative w-full overflow-hidden bg-cream">
       {/* floating doodle clouds */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-56 text-ink" aria-hidden="true">
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-56 text-ink"
+        aria-hidden="true"
+      >
         <Cloud className="animate-float absolute top-6 left-[4%] w-24 opacity-80 sm:w-32" />
         <Cloud className="animate-float-slow absolute top-20 left-[16%] w-16 opacity-60 sm:w-20" />
         <Cloud className="animate-float-slow absolute top-4 right-[6%] w-24 opacity-80 sm:w-32" />
@@ -58,7 +61,7 @@ export function KhidaSection() {
       </div>
 
       {/* Top label area */}
-      <div className="relative pt-[72px] pb-6 text-center">
+      <div className="relative pt-12 pb-5 text-center sm:pt-14">
         <p className="font-oswald text-[clamp(9px,1.1vw,11px)] font-light tracking-[0.42em] text-ink/55 uppercase">
           LET&apos;S BUILD SOMETHING GREAT
         </p>
@@ -123,9 +126,9 @@ export function KhidaSection() {
               className="mb-2.5 w-full cursor-pointer bg-ink px-3 py-2.5 text-center transition-colors hover:bg-signal-dark"
             >
               <p className="mb-0.5 font-display text-[clamp(13px,2vw,18px)] leading-none tracking-[0.1em] text-cream">
-VIEW
+                VIEW
                 <br />
-WORK
+                WORK
               </p>
               <span className="animate-nudge-left inline-block text-[13px] text-signal">←</span>
             </button>
@@ -143,7 +146,13 @@ WORK
                 </span>
               </span>
               <span className="flex cursor-pointer items-center gap-2 rounded bg-ink px-2 py-1.5 transition-transform hover:translate-x-0.5">
-                <svg viewBox="0 0 24 24" width="10" height="12" fill="var(--cream)" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="10"
+                  height="12"
+                  fill="var(--cream)"
+                  aria-hidden="true"
+                >
                   <path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.5-.2-2.8.8-3.5.8s-1.9-.8-3.1-.8c-1.6 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7 2-1.1 2.8-2.2c.9-1.3 1.2-2.5 1.3-2.6-.1 0-2.4-.9-2.4-3.8ZM14 5.4c.6-.8 1.1-1.9 1-3-1 0-2.2.6-2.9 1.5-.6.7-1.2 1.9-1 3 1.1 0 2.3-.6 2.9-1.5Z" />
                 </svg>
                 <span className="font-oswald text-[7px] leading-[1.4] font-light tracking-[0.04em] text-cream">
@@ -161,7 +170,8 @@ WORK
               type="button"
               className="khida-dashed inline-flex items-center gap-2 rounded-[30px] border-2 border-dashed border-cream/55 bg-transparent px-7 py-[11px] font-display text-[clamp(10px,1.3vw,13px)] tracking-[0.22em] text-cream transition-colors hover:bg-cream/10"
             >
-              <span className="animate-[spin_5s_linear_infinite] inline-block">★</span> LET&apos;S CONNECT
+              <span className="animate-[spin_5s_linear_infinite] inline-block">★</span> LET&apos;S
+              CONNECT
             </button>
           </div>
         </div>

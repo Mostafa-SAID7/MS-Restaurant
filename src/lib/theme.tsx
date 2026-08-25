@@ -35,7 +35,7 @@ function getStoredTheme(): Theme {
   if (typeof window === "undefined") return "system";
   const stored = window.localStorage.getItem(STORAGE_KEY);
   if (stored === "dark" || stored === "light" || stored === "system") return stored;
-  return "system";
+  return "light";
 }
 
 /**
@@ -58,7 +58,7 @@ function applyTheme(resolved: ResolvedTheme, animate: boolean) {
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>("system");
+  const [theme, setThemeState] = useState<Theme>("light");
   const [system, setSystem] = useState<ResolvedTheme>("light");
   const [mounted, setMounted] = useState(false);
 
@@ -109,7 +109,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
  * HMR re-mounts) degrades to a no-op instead of blanking the page.
  */
 const FALLBACK: ThemeContextValue = {
-  theme: "system",
+  theme: "light",
   resolved: "light",
   toggle: () => {},
   setTheme: () => {},

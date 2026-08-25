@@ -1,7 +1,6 @@
 import { ChickenLegIcon, PizzaIcon, SandwichIcon } from "./FoodIcons";
 
 const MENU_LINKS = ["Home", "Projects", "Experience", "Skills", "Contact"];
-const COMPANY_LINKS = ["About Us", "Careers", "Terms of Use", "Privacy Policy", "The Team"];
 
 const SOCIALS = [
   {
@@ -38,13 +37,14 @@ function FooterNav({ title, items }: { title: string; items: string[] }) {
 
 export function SiteFooter() {
   return (
-    <footer className="relative overflow-hidden bg-ink pt-16 text-cream">
-      <div className="mx-auto grid max-w-[1180px] gap-x-10 gap-y-12 px-6 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.2fr]">
+    <footer className="relative overflow-hidden bg-ink pt-12 text-cream sm:pt-14">
+      <div className="mx-auto grid max-w-[1180px] gap-x-12 gap-y-10 px-6 sm:grid-cols-[1.3fr_0.8fr] lg:grid-cols-[1.5fr_0.8fr_1fr]">
         {/* Brand + newsletter */}
         <div>
-          <p className="font-display text-3xl leading-none tracking-[0.04em] text-cream">MOSTAFA SAMIR</p>
+          <p className="font-display text-3xl leading-none tracking-[0.04em] text-cream">M.SAID</p>
           <p className="mt-4 max-w-[22rem] font-oswald text-sm leading-relaxed font-light text-cream/70">
-            Senior Full Stack Engineer focused on .NET 8, microservices, Clean Architecture, and high-performance web applications.
+            Senior Full Stack Engineer focused on .NET 8, microservices, Clean Architecture, and
+            high-performance web applications.
           </p>
 
           <form
@@ -71,7 +71,6 @@ export function SiteFooter() {
         </div>
 
         <FooterNav title="Portfolio" items={MENU_LINKS} />
-        <FooterNav title="Company" items={COMPANY_LINKS} />
 
         <div>
           <p className="font-oswald text-[11px] font-light tracking-[0.32em] text-cream/50 uppercase">
@@ -128,7 +127,7 @@ export function SiteFooter() {
       </div>
 
       {/* giant wordmark */}
-      <div className="relative mt-14 px-2">
+      <div className="relative mt-12 px-2 sm:mt-14">
         <p className="footer-wordmark text-center font-display text-[19vw] leading-[1.05] whitespace-nowrap text-cream">
           ENGINEER
         </p>
@@ -144,7 +143,7 @@ export function SiteFooter() {
 
       <div className="mx-auto flex max-w-[1180px] flex-col items-center justify-between gap-3 border-t border-cream/15 px-6 py-6 text-center sm:flex-row sm:text-left">
         <p className="font-oswald text-xs font-light tracking-[0.14em] text-cream/50 uppercase">
-          © {new Date().getFullYear()} Mostafa Samir. All rights reserved.
+          © {new Date().getFullYear()} M.SAID. All rights reserved.
         </p>
         <p className="font-oswald text-xs font-light tracking-[0.14em] text-cream/50 uppercase">
           Crafted with clean code from Egypt

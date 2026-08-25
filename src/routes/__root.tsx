@@ -13,7 +13,6 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { ThemeProvider } from "@/lib/theme";
 
-
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -103,7 +102,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   errorComponent: ErrorComponent,
 });
 
-const themeInitScript = `(function(){try{var s=localStorage.getItem("portfolio-theme");var sys=window.matchMedia("(prefers-color-scheme: dark)").matches;var d=(s==="dark")||(s!=="light"&&sys);var r=document.documentElement;r.classList.toggle("dark",d);r.style.colorScheme=d?"dark":"light";}catch(e){}})();`;
+const themeInitScript = `(function(){try{var s=localStorage.getItem("portfolio-theme");var d=s==="dark";var r=document.documentElement;r.classList.toggle("dark",d);r.style.colorScheme=d?"dark":"light";}catch(e){}})();`;
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
@@ -132,4 +131,3 @@ function RootComponent() {
     </QueryClientProvider>
   );
 }
-

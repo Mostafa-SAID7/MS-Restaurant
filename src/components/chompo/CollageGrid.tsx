@@ -6,7 +6,7 @@ const CARD =
 
 export function CollageGrid() {
   return (
-    <section className="bg-cream px-4 pb-16 sm:px-6">
+    <section className="bg-cream px-4 pb-10 sm:px-6 sm:pb-12">
       <div className="mx-auto grid max-w-[1200px] grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
         <img
           src={burgerBite}
@@ -14,6 +14,7 @@ export function CollageGrid() {
           loading="lazy"
           width={800}
           height={800}
+          decoding="async"
           className={`${CARD} object-cover`}
         />
 
@@ -22,7 +23,9 @@ export function CollageGrid() {
             <p className="font-slab text-2xl leading-tight font-extrabold text-signal sm:text-3xl">
               Building scalable products with clean architecture and modern web technologies.
             </p>
-            <p className="mt-4 font-heavy text-xs tracking-[0.2em] text-signal uppercase">4+ YEARS EXPERIENCE</p>
+            <p className="mt-4 font-heavy text-xs tracking-[0.2em] text-signal uppercase">
+              4+ YEARS EXPERIENCE
+            </p>
           </div>
         </div>
 
@@ -32,6 +35,7 @@ export function CollageGrid() {
           loading="lazy"
           width={800}
           height={800}
+          decoding="async"
           className={`${CARD} object-cover`}
         />
 
