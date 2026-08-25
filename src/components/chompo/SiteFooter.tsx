@@ -130,7 +130,7 @@ export function SiteFooter() {
       {/* giant wordmark */}
       <div className="relative mt-14 px-2">
         <p className="footer-wordmark text-center font-display text-[19vw] leading-[1.05] whitespace-nowrap text-cream">
-          PORTFOLIO
+          ENGINEER
         </p>
         <div
           aria-hidden="true"
