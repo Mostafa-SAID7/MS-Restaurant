@@ -25,7 +25,7 @@ export function Storefront({ className = "" }: { className?: string }) {
             fontFamily="Anton, sans-serif"
             fontSize="66"
           >
-            PORTFOLIO
+            RESTAURANT
           </text>
         </g>
 
