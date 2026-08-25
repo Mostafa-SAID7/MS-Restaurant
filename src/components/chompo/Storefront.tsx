@@ -14,7 +14,7 @@ export function Storefront({ className = "" }: { className?: string }) {
         {/* roof sign board */}
         <path d="M232 86h256v96H232z" fill="var(--cream)" />
         <path d="M232 86l14-12h258l-16 12" fill="var(--cream)" />
-        <path d="M488 86l16-12v96l-16 10z" fill="rgba(0,0,0,0.08)" />
+        <path d="M488 86l16-12v96l-16 10z" fill="var(--shadow-faint)" />
         <text
           x="360"
           y="152"

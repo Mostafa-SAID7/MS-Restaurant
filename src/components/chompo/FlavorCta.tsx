@@ -60,7 +60,7 @@ export function FlavorCta() {
             </div>
 
             {/* white label panel */}
-            <div className="relative m-6 w-[34%] max-w-[240px] rounded-sm bg-cream px-4 py-6 text-center shadow-[0_10px_0_rgba(0,0,0,0.15)] sm:m-8">
+            <div className="relative m-6 w-[34%] max-w-[240px] rounded-sm bg-cream px-4 py-6 text-center shadow-[0_10px_0_var(--shadow-soft)] sm:m-8">
               <p className="font-display text-4xl leading-none text-signal sm:text-5xl">25%</p>
               <p className="font-display text-2xl leading-none text-ink sm:text-3xl">Discount</p>
               <p className="mt-4 font-heavy text-[0.6rem] tracking-[0.08em] text-ink uppercase">

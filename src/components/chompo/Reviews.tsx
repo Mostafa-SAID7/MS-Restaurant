@@ -66,7 +66,7 @@ export function Reviews() {
           {REVIEWS.map((review, index) => (
             <article
               key={index}
-              className={`absolute w-[clamp(170px,14vw,210px)] min-h-[260px] p-5 shadow-[8px_8px_28px_rgba(0,0,0,0.35)] transition-transform duration-300 hover:z-20 ${
+              className={`absolute w-[clamp(170px,14vw,210px)] min-h-[260px] p-5 shadow-[8px_8px_28px_var(--shadow-strong)] transition-transform duration-300 hover:z-20 ${
                 review.tone === "signal" ? "bg-signal" : "bg-ink"
               }`}
               style={{
@@ -84,7 +84,7 @@ export function Reviews() {
           {REVIEWS.map((review, index) => (
             <article
               key={index}
-              className={`p-5 shadow-[6px_6px_20px_rgba(0,0,0,0.25)] ${
+              className={`p-5 shadow-[6px_6px_20px_var(--shadow-medium)] ${
                 review.tone === "signal" ? "bg-signal" : "bg-ink"
               }`}
             >
